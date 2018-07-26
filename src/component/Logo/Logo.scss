@@ -1,0 +1,15 @@
+.logo {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    img{
+        margin-left: -460px;
+        animation: 2.5s logomove cubic-bezier(.24, .75, .76, .1);
+    }
+}
+//Logo移进移出效果
+@keyframes logomove{
+    to{margin-left: calc(100vw + 460px);}
+}
