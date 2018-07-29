@@ -1,11 +1,10 @@
 import React from "react";
 import { render } from "react-dom";
 import "./component/reset.css";
-import Test from "./component/Logo/Logo"
-// import Test from "./component/Department/Department";
+import App from "./App";
 
 
 render(
-    <Test />,
+    <App/>,
     document.getElementById("root")
 );
