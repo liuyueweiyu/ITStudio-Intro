@@ -28,7 +28,7 @@ function carmove(selector) {
             this.y = curWinHeight/2 - 70 + q * 40;
             this.space = random(30, 90);
             this.fill = Math.random() > 0.45;
-            this.interst = Math.random() > 0.9;
+            this.interst = Math.random() > 0.85;
         },
         draw: function (cxt) {
             let index = atom[this.q].indexOf(this);
@@ -36,13 +36,13 @@ function carmove(selector) {
             if (tj) {
                 cxt.beginPath();
                 if(this.interst){
-                    cxt.fillStyle = '#99ccff';
-                    cxt.strokeStyle = '#99ccff';
+                    cxt.fillStyle = `rgba(153,204,255,${opa.toString()})`;
+                    cxt.strokeStyle = `rgba(153,204,255,${opa.toString()})`;
                     this.fill  = true;
                 }
                 else{
-                    cxt.fillStyle = `rgba(255,255,255,${opa.toString()})`;
-                    cxt.strokeStyle = `rgba(255,255,255,${opa.toString()})`;
+                    cxt.fillStyle = `rgba(255,255,255,1)`;
+                    cxt.strokeStyle = `rgba(255,255,255,1)`;
                 }
                 
                 cxt.rect(this.x, this.y, this.w, 20);

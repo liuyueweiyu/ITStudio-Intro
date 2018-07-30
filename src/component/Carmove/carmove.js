@@ -11,18 +11,22 @@ class Carmove extends React.Component{
             doLogo:true,
             doCar:false,
         }
-    }
-    componentDidMount() {
         setTimeout(() => {
             this.setState({
-                doLogo:false
+                doLogo: false
             });
         }, 2800);
         setTimeout(() => {
             this.setState({
                 doCar: true
             });
+            console.log("doCar");
         }, 14800);
+        
+    }
+    componentDidMount() {
+        
+        
         moveline("#canvas");
     }
     render(){
@@ -32,14 +36,14 @@ class Carmove extends React.Component{
                     { this.state.doLogo && <Logo />}
                     <h1 className='go-ahead'>人们总是匆忙前行</h1>
                     <canvas id='canvas'></canvas>
-                    <h2 className='ignore'><span>却常常忽略</span><span>兴趣</span></h2>
-                    <div></div>
+                    <h2 className='ignore'>却常常忽略<span>兴趣</span></h2>
+                    <div className='dispear'></div>
                 </div>
             );
         else
             return(
                 <div className='idea'>
-                    <h1>以及</h1>
+                    <h1>以及不经意间</h1>
                 </div>
             );
     }
