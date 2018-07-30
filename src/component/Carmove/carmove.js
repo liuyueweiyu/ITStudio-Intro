@@ -10,23 +10,29 @@ class Carmove extends React.Component{
         this.state = {
             doLogo:true,
             doCar:false,
+            first:true,
+            seconde:false,
         }
         setTimeout(() => {
             this.setState({
-                doLogo: false
+                doLogo:false
             });
         }, 2800);
         setTimeout(() => {
             this.setState({
-                doCar: true
+                doCar:true
             });
+            setTimeout(() => {
+                this.setState({
+                    first: false,
+                    seconde: true
+                });
+            }, 2300);
             console.log("doCar");
         }, 14800);
         
     }
     componentDidMount() {
-        
-        
         moveline("#canvas");
     }
     render(){
@@ -43,7 +49,8 @@ class Carmove extends React.Component{
         else
             return(
                 <div className='idea'>
-                    <h1>以及不经意间</h1>
+                    {this.state.first && <h1>以及不经意间迸发的</h1>}
+                    {this.state.seconde && <h2>灵感</h2>}
                 </div>
             );
     }

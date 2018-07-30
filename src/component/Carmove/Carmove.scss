@@ -48,12 +48,22 @@ $bg:#666666;
     align-items: center;
     justify-content: center;
     *{
+        opacity: 0;
         color: #fff;
         font-size: 44px;
         font-weight: 200;
     }
     h1{
-        animation: fontappear 4.3s ease-in-out forwards;
+        animation: fontappear 2.3s ease-in-out ;
+    }
+    h2{
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        // line-height: 150px;
+        text-align: center;
+        vertical-align: middle;
+        animation: toBall 4.3s ease-in-out 1.8s forwards;
     }
 }
 
@@ -67,4 +77,28 @@ $bg:#666666;
 @keyframes fontappeared{
     70%{opacity: 1;}
     100%{opacity: 1;}
+}
+
+@keyframes toBall{
+    33.3% {
+        opacity: 1;
+    }
+    40%{
+        color: transparent;
+        background: #fff;
+    }
+    66.7%{
+        border-radius: 50%;
+        color: transparent;
+        width: 150px;
+        height: 150px;
+    }
+    100%{
+        width: 0;
+        height: 0;
+        background: #fff;
+        border-radius: 50%;
+        opacity: 1;
+        color: transparent;
+    }
 }
