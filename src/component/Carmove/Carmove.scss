@@ -1,0 +1,73 @@
+$bg:#666666;
+#canvas{
+    z-index: -1;
+    background: $bg;
+    // background: radial-gradient(circle, rgb(248, 246, 248), rgb(204, 203, 204));
+}
+.carmove{
+    *{
+        position: absolute;
+    }
+    .go-ahead{
+        opacity: 0;
+        top:calc(25vh - 35px);
+        animation: fontappear 5.3s ease-in-out 2.8s;
+    }
+    .go-ahead,.ignore{
+        // opacity: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 40px;
+        font-weight:200; 
+        color: white;
+    }
+    .ignore{
+        bottom: calc(25vh - 35px);
+        // opacity: 1;
+        span{
+            opacity: 0;
+        }
+        span:nth-of-type(1){
+            color: #fff;
+            margin-left: -202px;
+            animation: fontappear 4.3s ease-in-out 6.8s forwards;
+        }
+        span:nth-of-type(2){
+            color: #99ccff;
+            animation: fontappeared 4.3s ease-in-out 6.8s forwards;
+        }
+        
+    }
+    div {
+        opacity: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        background: $bg;
+        // background: red;
+        animation: fontappeared 0.5s ease-in-out 13.6s forwards;
+    }
+    // animation: disapear 1s ease-in-out 13.8s forwards;
+}
+
+.idea{
+    background: $bg;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+@keyframes fontappear{
+    70%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+@keyframes fontappeared{
+    70%{opacity: 1;}
+    100%{opacity: 1;}
+}
