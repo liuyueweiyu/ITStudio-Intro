@@ -1,0 +1,71 @@
+$w:100px;
+$big-width:35px;
+$distance:45px;
+$small-width:10px;
+$bg:#333;
+
+.soap{
+    // z-index: 10;
+    // background: #333;
+    // opacity: 1;
+    position: relative;
+    width: $w;
+    height: $w;
+    div{
+        position: absolute;
+    }
+    .center{    
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: $big-width;
+        height: $big-width;
+        border-radius: 50%;
+        background: $bg;
+        margin: auto;
+        animation: bigboom 0.5s ease-in forwards;
+    }
+    .other{
+        height: $w/2;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: $small-width;
+        transform-origin:center bottom; //设置旋转中心
+        span{
+            display: block;
+            width: $small-width;
+            height: $small-width;
+            margin-top:$w/2;
+            background: $bg;
+            opacity: 0;
+            border-radius: 50%;
+            animation: samllboom 0.3s ease-in 0.4s forwards;
+        }
+    }
+    @for $i from 0 to 5 {
+        div:nth-of-type(#{$i+2}) {
+            transform: rotate(#{$i*72}deg);
+        }
+    }
+}
+
+@keyframes bigboom{
+    to{
+        width: 0;
+        height: 0;
+    }
+}
+@keyframes samllboom{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        width: 0;
+        height: 0;
+        margin-top: 0;
+        opacity: 1;
+    }
+}

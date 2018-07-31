@@ -6,7 +6,7 @@ const dev = Boolean(process.env.WEBPACK_SERVE);
 module.exports = {
     entry:{  
         index:["./src/index.js"]
-        // a: "./src/script/a.js",
+        // test:["./src/test.js"]
 
     },
     output:{
@@ -53,6 +53,7 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html',
             chunks: ['index'],
+            // chunks:['test'],
         }),
     ],
     mode: 'production',

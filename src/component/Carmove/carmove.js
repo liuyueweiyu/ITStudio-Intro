@@ -2,7 +2,7 @@ import React from "react";
 import moveline from "./moveline.js";
 import Logo from "../Logo/Logo"
 import "./Carmove.scss";
-
+import Soap from "../Soapbubble/Soapbubble";
 
 class Carmove extends React.Component{
     constructor(props){
@@ -12,6 +12,7 @@ class Carmove extends React.Component{
             doCar:false,
             first:true,
             seconde:false,
+            soap:false
         }
         setTimeout(() => {
             this.setState({
@@ -24,11 +25,16 @@ class Carmove extends React.Component{
             });
             setTimeout(() => {
                 this.setState({
+                    soap: true
+                });
+                console.log("soap");
+            }, 910);
+            setTimeout(() => {
+                this.setState({
                     first: false,
                     seconde: true
                 });
             }, 2300);
-            console.log("doCar");
         }, 14800);
         
     }
@@ -49,7 +55,19 @@ class Carmove extends React.Component{
         else
             return(
                 <div className='idea'>
-                    {this.state.first && <h1>以及不经意间迸发的</h1>}
+                    {this.state.first && 
+                    (
+                        <React.Fragment>
+                            <h1>以及不经意间迸发的</h1>
+                            {this.state.soap &&
+                            <Soap className = 'Soap' bg='#fff'/>
+                            }
+                            {!this.state.soap &&
+                                <div className='box'></div>
+                            }
+                        </React.Fragment>
+                    )
+                    }
                     {this.state.seconde && <h2>灵感</h2>}
                 </div>
             );

@@ -48,10 +48,13 @@ $bg:#666666;
     align-items: center;
     justify-content: center;
     *{
-        opacity: 0;
+        // opacity: 0;
         color: #fff;
         font-size: 44px;
         font-weight: 200;
+    }
+    h1,h2{
+        opacity: 0;
     }
     h1{
         animation: fontappear 2.3s ease-in-out ;
@@ -60,16 +63,22 @@ $bg:#666666;
         display: inline-block;
         width: 150px;
         height: 150px;
-        // line-height: 150px;
+        // height: 58.4px;
+        // padding: 45.8px 0;
+        line-height: 150px;
         text-align: center;
         vertical-align: middle;
-        animation: toBall 4.3s ease-in-out 1.8s forwards;
+        animation: toBall 3.3s ease-in-out 1.8s forwards;
     }
+}
+
+.box{
+    width: 100px;
+    height: 100px;
 }
 
 
 @keyframes fontappear{
-    // 0%{opacity: 0;}
     70%{opacity: 1;}
     100%{opacity: 0;}
 }
@@ -80,18 +89,19 @@ $bg:#666666;
 }
 
 @keyframes toBall{
-    33.3% {
+    55.3% {
         opacity: 1;
+        color: #fff;
+        background: #666666;
     }
-    40%{
+    65%{
+        height: 150px;
+        width: 150px;
         color: transparent;
         background: #fff;
     }
-    66.7%{
+    70.7%{
         border-radius: 50%;
-        color: transparent;
-        width: 150px;
-        height: 150px;
     }
     100%{
         width: 0;

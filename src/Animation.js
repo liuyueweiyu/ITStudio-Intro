@@ -1,12 +1,12 @@
 import React from "react";
 import Carmove from "./component/Carmove/Carmove.js";
-
+import Atom from "./component/Atom/Atom";
 
 class Animation extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            stage:0
+            stage:1
         }
     }
 
@@ -17,7 +17,10 @@ class Animation extends React.Component{
                 return(
                     <Carmove />
                 );    
-
+            case 1:
+                return(
+                    <Atom />
+                )
 
                 break;
         
