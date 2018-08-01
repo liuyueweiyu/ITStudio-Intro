@@ -1,0 +1,158 @@
+@mixin movep($top, $left, $bottom, $right) {
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}
+$time:1;
+.atom{
+    
+    #canvas {
+        z-index: -1;
+        position: absolute;
+    }
+    .outer {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        animation: whirl 2s cubic-bezier(.81, .19, .39, .82) forwards 6s;
+    }
+    .first,.second{
+        background: #99ccff;
+        border-radius: 50%;
+        position: absolute;
+        @include movep(0, 0, 0, 0);
+        margin: auto;
+    }
+    .first{
+        width: 150px;
+        height: 150px;
+        animation:ballmove 5s linear forwards,
+                   moveleft 1s ease-in-out forwards 5s;
+    }
+    .second{
+        width: 100px;
+        height: 100px;
+        animation: moveright 1s ease-in-out forwards;
+    }
+
+    .small{
+        width: 110px;
+        height: 110px;
+        position: absolute;
+        @include movep(0, 0, 0, 0);
+        transform: rotate(180deg);
+        margin: auto;
+        .smallball{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            background: #99ccff;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 50%;
+            // transform-origin : calc(25vw + 20px) 20px;
+            transform-origin: calc(-25vw - 20px) -20px;
+            // transform: rotate(180deg);
+            animation: whirlleft 4s cubic-bezier(.24, .75, .76, .1) 0.67s forwards,
+                       whirlright 4s cubic-bezier(.24, .75, .76, .1) 4.68s forwards;
+                       
+            
+        }
+        .circlesvg{
+            stroke-dasharray: 0 314;
+            animation: rot 2s linear forwards;
+                    //    rerot 2s linear 6.67 forwards;
+        }
+        animation: change 0.01s linear 4.67s forwards;
+    }
+
+}
+$range:25px;
+@keyframes ballmove{
+    10%{
+        @include movep(1.5*$range, 0, 0, 0);
+    }
+    15%{
+        @include movep(0, 1.3*$range, 1.2*$range, 0);
+    }
+    30%{
+        @include movep(1.3*$range, 0, 0, 1.2*$range);
+    }
+    40%{
+        @include movep(1.3*$range, 1.4*$range, 0, 0);
+    }
+    55%{
+        @include movep(0, 1.2*$range, 1.7*$range, 0);
+    }
+    67%{
+        @include movep(1.3*$range, 1.9*$range, 0, 0);
+    }
+    75%{
+        @include movep(0, 0,1.8*$range, 1.5*$range);
+    }
+    87%{
+        @include movep(1.1*$range, 0, 0,1.2*$range);
+    }
+    100%{
+        @include movep(0, 0, 0, 0);
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@keyframes moveleft{
+    to{right: 50vw;}
+}
+
+@keyframes moveright{
+    to{left: 50vw;}
+}
+
+@keyframes whirl{
+    89% {
+        transform: rotate(200deg);
+    }
+    91% {
+        transform: rotate(200deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+
+@keyframes rot {
+    100%{
+        stroke-dasharray: 314 314;
+    }
+}
+@keyframes rerot{
+    100%{
+        stroke-dasharray: 0 314;
+    }
+}
+@keyframes whirlleft{
+    48%{
+        transform: rotate(180deg);
+    }
+    90%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes whirlright{
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes change{
+    to{transform: rotate(0deg)}
+}
