@@ -28,14 +28,14 @@ class Carmove extends React.Component{
                     soap: true
                 });
                 console.log("soap");
-            }, 910);
+            }, 3300);
             setTimeout(() => {
                 this.setState({
                     first: false,
                     seconde: true
                 });
-            }, 2300);
-        }, 14800);
+            }, 4000);
+        }, 10500);
         
     }
     componentDidMount() {
@@ -75,3 +75,10 @@ class Carmove extends React.Component{
 }
 
 export default Carmove;
+
+//动画顺序 ---------------------------------------- 结束时间点
+//1. Logo移动 2800 ------------------------------------2.8s
+//2. "人们总是匆忙前行" 动画闪现 4.2s ---------------------7s
+//3. "却常常忽略灵感" 动画闪现 3.5S ---------------------10.5s
+//4. "以及不经意间迸发的" 动画闪现 4s -------------------14.5s
+//5. "灵感" 动画闪现 3.3s ------------------------------17.8s

@@ -6,11 +6,14 @@ class Animation extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            stage:1
+            stage:0
         }
+        setTimeout(() => {
+            this.setState({
+                stage:1
+            })
+        }, 17800);
     }
-
-
     render(){
         switch (this.state.stage) {
             case 0:

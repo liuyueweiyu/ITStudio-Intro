@@ -5,7 +5,7 @@ class App extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            isBegin : true
+            isBegin : false
         }
         this.begin = this.begin.bind(this);
     } 

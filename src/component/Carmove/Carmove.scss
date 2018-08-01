@@ -5,13 +5,14 @@ $bg:#666666;
     // background: radial-gradient(circle, rgb(248, 246, 248), rgb(204, 203, 204));
 }
 .carmove{
+    animation: disapear 0.2s linear 10.3s forwards;
     *{
         position: absolute;
     }
     .go-ahead{
         opacity: 0;
         top:calc(25vh - 35px);
-        animation: fontappear 5.3s ease-in-out 2.8s;
+        animation: fontappear 4s ease-in-out 2.8s;
     }
     .go-ahead,.ignore{
         left: 0;
@@ -24,7 +25,7 @@ $bg:#666666;
     .ignore{
         bottom: calc(25vh - 35px);
         opacity: 0;
-        animation: fontappeared 4.3s ease-in-out 6.8s forwards;
+        animation: fontappeared 3.7s ease-in-out 6.8s forwards;
         span{
             color: #99ccff;
         }
@@ -48,7 +49,6 @@ $bg:#666666;
     align-items: center;
     justify-content: center;
     *{
-        // opacity: 0;
         color: #fff;
         font-size: 44px;
         font-weight: 200;
@@ -57,18 +57,16 @@ $bg:#666666;
         opacity: 0;
     }
     h1{
-        animation: fontappear 2.3s ease-in-out ;
+        animation: fontappear 4s ease-in-out ;
     }
     h2{
         display: inline-block;
         width: 150px;
         height: 150px;
-        // height: 58.4px;
-        // padding: 45.8px 0;
         line-height: 150px;
         text-align: center;
         vertical-align: middle;
-        animation: toBall 3.3s ease-in-out 1.8s forwards;
+        animation: toBall 3.3s ease-in-out  forwards;
     }
 }
 
@@ -76,7 +74,9 @@ $bg:#666666;
     width: 100px;
     height: 100px;
 }
-
+@keyframes disapear{
+    to{opacity: 0;}
+}
 
 @keyframes fontappear{
     70%{opacity: 1;}

@@ -38,7 +38,7 @@ class Atom extends React.Component{
                     {this.state.small &&
                         <div className="small">
                             <svg width="110px" height="110px">
-                                <circle cx="55" cy="55" r="50" stroke-width="9.8" stroke="#99ccff" fill="none"></circle>
+                                <circle cx="55" cy="55" r="50" stroke-width="8.8" stroke="#99ccff" fill="none"></circle>
                                 <circle cx="55" cy="55" r="50" stroke-width="10" stroke="#666" fill="none" class="circlesvg"></circle>
                             </svg>
                             <div className="smallball"></div>
