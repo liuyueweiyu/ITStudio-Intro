@@ -1,8 +1,9 @@
 function ahead(selector) {
 
     let color = '#fff',
-        speedl = 0.35,
-        speedu = 0.58;
+        speedl = 0.05,
+        speedu = 0.08,
+        f = false;
 
     let curWinWidth = window.innerWidth,
         curWinHeight = window.innerHeight;
@@ -37,6 +38,7 @@ function ahead(selector) {
             [this.x, this.y, this.movex, this.movey] = randomPositon(1000, 10);
             this.r = random(1, 5);
             this.v = random(speedl, speedu);
+            // this.f = f;
         },
         draw: function (cxt) {
             cxt.beginPath();
@@ -51,20 +53,15 @@ function ahead(selector) {
                 this.y += this.movey * this.v;
                 this.x += this.movex * this.v;
             } else {
-                this.init();
+                if(f)
+                    this.init();
             }
         }
     }
 
     let atom = [];
-    const atomCount = 40;
-    for (let i = 0; i < atomCount; i++) {
-        setTimeout(function () {
-            let oAtom = new Atom();
-            oAtom.init();
-            atom.push(oAtom);
-        }, 10 * i);
-    }
+    // const atomCount = 40;
+    createAtom(500);
     let ani;
     function move() {
         oGc.clearRect(0, 0, width, height);
@@ -77,10 +74,32 @@ function ahead(selector) {
     setTimeout(() => {
         window.cancelAnimationFrame(ani);
         oGc.clearRect(0, 0, width, height);
-        speedl = 0.03;
-        speedu = 0.05;
-        move();
-    }, 500);
+        setTimeout(() => {
+            speedl = 0.03;
+            speedu = 0.05;
+            f = true;
+            createAtom(40);
+            move();
+
+        }, 300);
+    }, 1500);
+
+
+    function createAtom(number) {
+        atom.length = 0;
+        for (let i = 0; i < number; i++) {
+            // setTimeout(function () {
+                let oAtom = new Atom();
+                oAtom.init();
+                atom.push(oAtom);
+            // }, 10 * i);
+        }
+    }
+
 }
 
 export default ahead;
+
+/*
+**
+*/

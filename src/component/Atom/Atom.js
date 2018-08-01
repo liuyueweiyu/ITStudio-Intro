@@ -10,16 +10,16 @@ class Atom extends React.Component{
             second:false,
             small:false
         }
-        setTimeout(() => {
-            this.setState({
-                second:true
-            })
-        }, 5000);
-        setTimeout(() => {
-            this.setState({
-                small: true
-            })
-        }, 8000);
+        // setTimeout(() => {
+        //     this.setState({
+        //         second:true
+        //     })
+        // }, 5000);
+        // setTimeout(() => {
+        //     this.setState({
+        //         small: true
+        //     })
+        // }, 8000);
     }
 
     componentDidMount(){
@@ -31,7 +31,7 @@ class Atom extends React.Component{
             <div className="atom">
                 <canvas id="canvas"></canvas>
                 <div className="outer">
-                    <div className="first"></div>
+                    {/* <div className="first"></div> */}
                     {this.state.second && (
                         <div className="second"></div>                    
                     )}
@@ -52,3 +52,7 @@ class Atom extends React.Component{
 }
 
 export default Atom;
+
+/*
+ **
+ */

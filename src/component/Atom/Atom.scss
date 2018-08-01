@@ -15,7 +15,7 @@ $time:1;
         position: relative;
         width: 100vw;
         height: 100vh;
-        animation: whirl 2s cubic-bezier(.81, .19, .39, .82) forwards 6s;
+        // animation: whirl 2s cubic-bezier(.81, .19, .39, .82) forwards 6s;
     }
     .first,.second{
         background: #99ccff;
@@ -27,13 +27,13 @@ $time:1;
     .first{
         width: 150px;
         height: 150px;
-        animation:ballmove 5s linear forwards,
-                   moveleft 1s ease-in-out forwards 5s;
+        // animation:ballmove 5s linear forwards,
+                //    moveleft 1s ease-in-out forwards 5s;
     }
     .second{
         width: 100px;
         height: 100px;
-        animation: moveright 1s ease-in-out forwards;
+        // animation: moveright 1s ease-in-out forwards;
     }
 
     .small{
@@ -56,17 +56,16 @@ $time:1;
             border-radius: 50%;
             // transform-origin: calc(-25vw - 20px) -20px;
             transform-origin: calc(-20vw - 20px) -20px;
-            animation: whirlleft 4s cubic-bezier(.24, .75, .76, .1) 0.67s forwards,
-                       whirlright 4s cubic-bezier(.24, .75, .76, .1) 4.68s forwards;
+            // animation: whirlleft 4s cubic-bezier(.24, .75, .76, .1) 0.67s forwards,
+                    //    whirlright 4s cubic-bezier(.24, .75, .76, .1) 4.68s forwards;
                        
             
         }
         .circlesvg{
             stroke-dasharray: 0 314;
-            animation: rot 2s linear forwards;
-                    //    rerot 2s linear 6.67 forwards;
+            // animation: rot 2s linear forwards;
         }
-        animation: change 0.01s linear 4.67s forwards;
+        // animation: change 0.01s linear 4.67s forwards;
     }
 
 }
