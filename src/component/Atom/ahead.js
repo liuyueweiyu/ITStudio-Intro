@@ -58,7 +58,21 @@ function ahead(selector) {
             }
         }
     }
+    setTimeout(() => {
+        window.cancelAnimationFrame(ani);
+        oGc.clearRect(0, 0, width, height);
+        setTimeout(() => {
+            speedl = 0.03;
+            speedu = 0.05;
+            f = true;
+            createAtom(60);
+    // console.log(new Date());
+            
+            move();
 
+        }, 300);
+    }, 1500);
+    // console.log(new Date());
     let atom = [];
     // const atomCount = 40;
     createAtom(500);
@@ -71,18 +85,8 @@ function ahead(selector) {
         ani =  requestAnimationFrame(move);
     }
     move();
-    setTimeout(() => {
-        window.cancelAnimationFrame(ani);
-        oGc.clearRect(0, 0, width, height);
-        setTimeout(() => {
-            speedl = 0.03;
-            speedu = 0.05;
-            f = true;
-            createAtom(40);
-            move();
+    
 
-        }, 300);
-    }, 1500);
 
 
     function createAtom(number) {

@@ -15,7 +15,7 @@ $time:1;
         position: relative;
         width: 100vw;
         height: 100vh;
-        // animation: whirl 2s cubic-bezier(.81, .19, .39, .82) forwards 6s;
+        animation: whirl 2s cubic-bezier(.81, .19, .39, .82) forwards 6s;
     }
     .first,.second{
         background: #99ccff;
@@ -25,9 +25,13 @@ $time:1;
         margin: auto;
     }
     .first{
-        width: 150px;
-        height: 150px;
-        // animation:ballmove 5s linear forwards,
+        // width: 150px;
+        // height: 150px;
+        width: 0;
+        height: 0;
+        animation:ballapear 0.5 ease-in forwards 3.8s;
+        
+        // ballmove 5s linear forwards,
                 //    moveleft 1s ease-in-out forwards 5s;
     }
     .second{
@@ -70,6 +74,13 @@ $time:1;
 
 }
 $range:25px;
+@keyframes ballapear{
+    to{
+        width: 150px;
+        height: 150px;
+    }
+}
+
 @keyframes ballmove{
     10%{
         @include movep(1.5*$range, 0, 0, 0);

@@ -7,9 +7,15 @@ class Atom extends React.Component{
     constructor(props){
         super(props);
         this.state = {
+            first:false,
             second:false,
             small:false
         }
+        // setTimeout(() => {
+        //     this.setState({
+        //         first:true
+        //     })
+        // }, 2800);
         // setTimeout(() => {
         //     this.setState({
         //         second:true
@@ -31,7 +37,9 @@ class Atom extends React.Component{
             <div className="atom">
                 <canvas id="canvas"></canvas>
                 <div className="outer">
-                    {/* <div className="first"></div> */}
+                    {/* {this.state.first && */}
+                        <div className="first"></div>
+                    {/* } */}
                     {this.state.second && (
                         <div className="second"></div>                    
                     )}
@@ -54,5 +62,6 @@ class Atom extends React.Component{
 export default Atom;
 
 /*
- **
+ ** 1. 粒子动画准备时间 1.8s
+ ** 2. 第一个球出现 
  */

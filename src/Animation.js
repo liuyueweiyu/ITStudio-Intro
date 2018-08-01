@@ -24,8 +24,6 @@ class Animation extends React.Component{
                 return(
                     <Atom />
                 )
-
-                break;
         
             default:
                 break;
