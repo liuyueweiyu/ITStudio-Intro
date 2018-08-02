@@ -1,8 +1,8 @@
 function ahead(selector) {
 
     let color = '#fff',
-        speedl = 0.05,
-        speedu = 0.08,
+        speedl = 0.03,
+        speedu = 0.05,
         f = false;
 
     let curWinWidth = window.innerWidth,
@@ -53,29 +53,29 @@ function ahead(selector) {
                 this.y += this.movey * this.v;
                 this.x += this.movex * this.v;
             } else {
-                if(f)
+                // if(f)
                     this.init();
             }
         }
     }
-    setTimeout(() => {
-        window.cancelAnimationFrame(ani);
-        oGc.clearRect(0, 0, width, height);
-        setTimeout(() => {
-            speedl = 0.03;
-            speedu = 0.05;
-            f = true;
-            createAtom(60);
-    // console.log(new Date());
+    // setTimeout(() => {
+    //     window.cancelAnimationFrame(ani);
+    //     oGc.clearRect(0, 0, width, height);
+    //     setTimeout(() => {
+    //         // speedl = 0.03;
+    //         // speedu = 0.05;
+    //         // f = true;
+    //         // createAtom(60);
+    // // console.log(new Date());
             
-            move();
+    //         move();
 
-        }, 300);
-    }, 1500);
+    //     }, 300);
+    // }, 1500);
     // console.log(new Date());
     let atom = [];
     // const atomCount = 40;
-    createAtom(500);
+    createAtom(60);
     let ani;
     function move() {
         oGc.clearRect(0, 0, width, height);

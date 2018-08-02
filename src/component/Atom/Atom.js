@@ -16,16 +16,16 @@ class Atom extends React.Component{
         //         first:true
         //     })
         // }, 2800);
-        // setTimeout(() => {
-        //     this.setState({
-        //         second:true
-        //     })
-        // }, 5000);
-        // setTimeout(() => {
-        //     this.setState({
-        //         small: true
-        //     })
-        // }, 8000);
+        setTimeout(() => {
+            this.setState({
+                second:true
+            })
+        }, 7200);
+        setTimeout(() => {
+            this.setState({
+                small: true
+            })
+        }, 7700);
     }
 
     componentDidMount(){
@@ -37,9 +37,7 @@ class Atom extends React.Component{
             <div className="atom">
                 <canvas id="canvas"></canvas>
                 <div className="outer">
-                    {/* {this.state.first && */}
-                        <div className="first"></div>
-                    {/* } */}
+                    <div className="first"></div>
                     {this.state.second && (
                         <div className="second"></div>                    
                     )}
@@ -53,7 +51,8 @@ class Atom extends React.Component{
                         </div>
                     }
                 </div>
-                
+                <h1>人们总是独自前进</h1>
+                <h2>却时常忘记选择</h2>
             </div>
         );
     }
@@ -62,6 +61,12 @@ class Atom extends React.Component{
 export default Atom;
 
 /*
- ** 1. 粒子动画准备时间 1.8s
- ** 2. 第一个球出现 
+ ** 1. 粒子动画准备时间 1.7s ---------------------------1.7s-----19.5s
+ ** 2. 第一个球出现 0.5---------------------------------2.2s-----20s
+ ** 3. 第一个球运动 5s/ 人们总是独自前进 动画闪现5s-------7.2s-----25s
+ ** 4. 两个小球从中间往两边移动 0.5s --------------------7.7s-------26s
+ ** 5. 中间小球开始出现 0.3s ---------------------------8s -------27.3s
+ ** 6. 中间小球两边旋转 5.4s ---------------------------13.4s
+ ** 7. 中间的环闭紧 -----------------------------------14.751s
+
  */

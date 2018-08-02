@@ -15,7 +15,6 @@ $time:1;
         position: relative;
         width: 100vw;
         height: 100vh;
-        animation: whirl 2s cubic-bezier(.81, .19, .39, .82) forwards 6s;
     }
     .first,.second{
         background: #99ccff;
@@ -24,20 +23,21 @@ $time:1;
         @include movep(0, 0, 0, 0);
         margin: auto;
     }
+    
     .first{
-        // width: 150px;
-        // height: 150px;
         width: 0;
         height: 0;
-        animation:ballapear 0.5 ease-in forwards 3.8s;
-        
-        // ballmove 5s linear forwards,
-                //    moveleft 1s ease-in-out forwards 5s;
+        animation:ballapear 0.5s ease-in forwards 1.7s,
+                  ballmove 5s linear forwards 2.2s,
+                  moveleft 0.5s linear forwards 7.2s,
+                  colseleft 0.5s linear forwards 14.751s,
+                  tobig 0.5s ease-in forwards 15.251s;
     }
     .second{
         width: 100px;
         height: 100px;
-        // animation: moveright 1s ease-in-out forwards;
+        animation: moveright 0.5s linear forwards,
+                   closeright 0.5s linear forwards 7.551s;
     }
 
     .small{
@@ -45,7 +45,6 @@ $time:1;
         height: 110px;
         position: absolute;
         @include movep(0, 0, 0, 0);
-        transform: rotate(180deg);
         margin: auto;
         .smallball{
             width: 40px;
@@ -58,26 +57,67 @@ $time:1;
             right: 0;
             margin: auto;
             border-radius: 50%;
-            // transform-origin: calc(-25vw - 20px) -20px;
             transform-origin: calc(-20vw - 20px) -20px;
-            // animation: whirlleft 4s cubic-bezier(.24, .75, .76, .1) 0.67s forwards,
-                    //    whirlright 4s cubic-bezier(.24, .75, .76, .1) 4.68s forwards;
-                       
-            
+            //cubic-bezier(.24, .75, .76, .1)
+            animation: whirlleft 2.7s linear 1.2s forwards,
+                       whirlright 2.7s linear 3.901s forwards;
         }
         .circlesvg{
             stroke-dasharray: 0 314;
-            // animation: rot 2s linear forwards;
+            animation: rot 2s linear forwards 0.3s,
+                       rerot 1.85s linear forwards 5.201s;
         }
-        // animation: change 0.01s linear 4.67s forwards;
+        animation:smallballapear 0.3s ease-in forwards,
+                  change 0.001s linear 3.9s forwards;
+                //   smalldisapear 0.3s ease-in forwards 6.051s;
     }
 
+    h1,h2{
+        position: absolute;
+        top: 75vh;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 44px;
+        color: #99ccff;
+        opacity: 0;
+        font-weight: 200;
+    }
+    h1{
+        animation: fontapear 5s linear 2.2s;
+    }
+    h2{
+        animation: fontapear 5.4s linear 8s;
+    }
 }
 $range:25px;
+@keyframes fontapear{
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 @keyframes ballapear{
     to{
         width: 150px;
         height: 150px;
+    }
+}
+
+@keyframes smallballapear{
+    to{
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@keyframes smalldisapear{
+    to{
+        width: 0;
+        height: 0;
     }
 }
 
@@ -104,7 +144,7 @@ $range:25px;
         @include movep(0, 0,1.8*$range, 1.5*$range);
     }
     87%{
-        @include movep(1.1*$range, 0, 0,1.2*$range);
+       @include movep(0, 0, 0, 0);
     }
     100%{
         @include movep(0, 0, 0, 0);
@@ -116,6 +156,18 @@ $range:25px;
 @keyframes moveleft{
     to{right: 40vw;}
 }
+@keyframes colseleft {
+    // to {
+    //     margin-left: calc(50vw - 50px);
+    // }
+    to {
+        right: 0;
+    }
+}
+@keyframes closeright{
+    to{left: 0;}
+}
+
 
 @keyframes moveright{
     to{left: 40vw;}
@@ -133,18 +185,21 @@ $range:25px;
     }
 }
 
-
-@keyframes rot {
-    30%{
-        stroke-dasharray: 314 314;
-    }
-    60%{
-        stroke-dasharray: 314 314;
-    }
-    100%{
-        stroke-dasharray: 0 314;
+@keyframes tobig{
+    to{
+        border-radius: 0%;
+        width: 200vw;
+        height: 200vw;
+        
     }
 }
+
+@keyframes rot {
+    100% {
+        stroke-dasharray: 314 314;
+    }
+}
+
 @keyframes rerot{
     100%{
         stroke-dasharray: 0 314;
@@ -169,5 +224,5 @@ $range:25px;
 }
 
 @keyframes change{
-    to{transform: rotate(0deg)}
+    to{transform: rotate(180deg)}
 }

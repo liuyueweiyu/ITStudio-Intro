@@ -28,7 +28,7 @@ class Carmove extends React.Component{
                     soap: true
                 });
                 console.log("soap");
-            }, 2800);
+            }, 2500);
             setTimeout(() => {
                 this.setState({
                     first: false,
