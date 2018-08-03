@@ -1,3 +1,5 @@
+@import "../variable.scss";
+
 @mixin movep($top, $left, $bottom, $right) {
     top: $top;
     bottom: $bottom;
@@ -17,7 +19,7 @@ $time:1;
         height: 100vh;
     }
     .first,.second{
-        background: #99ccff;
+        background: $three;
         border-radius: 50%;
         position: absolute;
         @include movep(0, 0, 0, 0);
@@ -50,7 +52,7 @@ $time:1;
             width: 40px;
             height: 40px;
             position: absolute;
-            background: #99ccff;
+            background: $three;
             top: 0;
             bottom: 0;
             left: 0;
@@ -62,7 +64,11 @@ $time:1;
             animation: whirlleft 2.7s linear 1.2s forwards,
                        whirlright 2.7s linear 3.901s forwards;
         }
+        .circleone{
+            stroke: $three;
+        }
         .circlesvg{
+            stroke:$one;
             stroke-dasharray: 0 314;
             animation: rot 2s linear forwards 0.3s,
                        rerot 1.85s linear forwards 5.201s;
@@ -79,7 +85,7 @@ $time:1;
         right: 0;
         text-align: center;
         font-size: 44px;
-        color: #99ccff;
+        color: $three;
         opacity: 0;
         font-weight: 200;
     }

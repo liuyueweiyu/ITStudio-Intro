@@ -1,7 +1,8 @@
+@import "../variable.scss";
 .logo {
     width: 100vw;
     height: 100vh;
-    background: #666666;
+    background: $one;
     display: flex;
     align-items: center;
     img{
@@ -15,8 +16,3 @@
     to{margin-left: calc(100vw + 460px);
     }
 }
-
-// @keyframes ToNUll{
-//     // to{opacity: 0;}
-//     to{display: n}
-// }

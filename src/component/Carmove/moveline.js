@@ -36,8 +36,8 @@ function carmove(selector) {
             if (tj) {
                 cxt.beginPath();
                 if(this.interst){
-                    cxt.fillStyle = `rgba(153,204,255,${opa.toString()})`;
-                    cxt.strokeStyle = `rgba(153,204,255,${opa.toString()})`;
+                    cxt.fillStyle = `rgba(205, 228, 202,${opa.toString()})`;
+                    cxt.strokeStyle = `rgba(205, 228, 202,${opa.toString()})`;
                     this.fill  = true;
                 }
                 else{

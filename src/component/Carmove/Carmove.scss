@@ -1,7 +1,8 @@
-$bg:#666666;
+@import "../variable.scss";
+
 #canvas{
     z-index: -1;
-    background: $bg;
+    background: $one;
     // background: radial-gradient(circle, rgb(248, 246, 248), rgb(204, 203, 204));
 }
 .carmove{
@@ -20,14 +21,15 @@ $bg:#666666;
         text-align: center;
         font-size: 40px;
         font-weight:200; 
-        color: white;
+        color: $two;
     }
     .ignore{
         bottom: calc(25vh - 35px);
         opacity: 0;
+        right: 20px;
         animation: fontappeared 3.7s ease-in-out 6.8s forwards;
         span{
-            color: #99ccff;
+            color: $three;
         }
         
     }
@@ -36,20 +38,20 @@ $bg:#666666;
         width: 100vw;
         height: 100vh;
         z-index: 100;
-        background: $bg;
+        background: $one;
         animation: fontappeared 0.5s ease-in-out 13.6s forwards;
     }
 }
 
 .idea{
-    background: $bg;
+    background: $one;
     height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     *{
-        color: #fff;
+        color: $two;
         font-size: 44px;
         font-weight: 200;
     }
@@ -91,32 +93,32 @@ $bg:#666666;
 @keyframes toBall{
     55.3% {
         opacity: 1;
-        color: #fff;
-        background: #666666;
+        color: $two;
+        background: $one;
     }
     65%{
         height: 150px;
         width: 150px;
         color: transparent;
-        background: #fff;
+        background: $two;
     }
     70.7%{
         border-radius: 50%;
     }
-    95%{
+    100%{
         width: 0;
         height: 0;
-        background: #fff;
+        background: $two;
         border-radius: 50%;
         opacity: 1;
         color: transparent;
     }
-    100%{
-        width: 10px;
-        height: 10px;
-        background: #fff;
-        border-radius: 50%;
-        opacity: 1;
-        color: transparent;
-    }
+    // 100%{
+    //     width: 10px;
+    //     height: 10px;
+    //     background: $two;
+    //     border-radius: 50%;
+    //     opacity: 1;
+    //     color: transparent;
+    // }
 }
