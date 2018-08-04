@@ -19,7 +19,7 @@ $time:1;
         height: 100vh;
     }
     .first,.second{
-        background: $three;
+        background: $two;
         border-radius: 50%;
         position: absolute;
         @include movep(0, 0, 0, 0);
@@ -27,6 +27,7 @@ $time:1;
     }
     
     .first{
+        opacity: 0;
         width: 0;
         height: 0;
         animation:ballapear 0.5s ease-in forwards 1.7s,
@@ -52,7 +53,7 @@ $time:1;
             width: 40px;
             height: 40px;
             position: absolute;
-            background: $three;
+            background: $two;
             top: 0;
             bottom: 0;
             left: 0;
@@ -65,7 +66,7 @@ $time:1;
                        whirlright 2.7s linear 3.901s forwards;
         }
         .circleone{
-            stroke: $three;
+            stroke: $two;
         }
         .circlesvg{
             stroke:$one;
@@ -85,7 +86,7 @@ $time:1;
         right: 0;
         text-align: center;
         font-size: 44px;
-        color: $three;
+        color: $two;
         opacity: 0;
         font-weight: 200;
     }
@@ -107,7 +108,11 @@ $range:25px;
 }
 
 @keyframes ballapear{
+    0%{
+        opacity: 1;
+    }
     to{
+        opacity: 1;
         width: 150px;
         height: 150px;
     }

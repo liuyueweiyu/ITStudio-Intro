@@ -51,7 +51,7 @@
     align-items: center;
     justify-content: center;
     *{
-        color: $two;
+        
         font-size: 44px;
         font-weight: 200;
     }
@@ -59,9 +59,11 @@
         opacity: 0;
     }
     h1{
+        color: $two;
         animation: fontappear 4s ease-in-out ;
     }
     h2{
+        color: $three;
         display: inline-block;
         width: 150px;
         height: 150px;
@@ -93,14 +95,14 @@
 @keyframes toBall{
     55.3% {
         opacity: 1;
-        color: $two;
+        color: $three;
         background: $one;
     }
     65%{
         height: 150px;
         width: 150px;
         color: transparent;
-        background: $two;
+        background: $three;
     }
     70.7%{
         border-radius: 50%;
@@ -108,7 +110,7 @@
     100%{
         width: 0;
         height: 0;
-        background: $two;
+        background: $three;
         border-radius: 50%;
         opacity: 1;
         color: transparent;

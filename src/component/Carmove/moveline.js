@@ -3,6 +3,7 @@ function carmove(selector) {
     let Speed = [20,20,20,20];
     let opa = 1;
     let seed = 0;
+    const color = "227,62,86";
     const atomCount = 60;
 
     let curWinWidth = window.innerWidth,
@@ -36,8 +37,8 @@ function carmove(selector) {
             if (tj) {
                 cxt.beginPath();
                 if(this.interst){
-                    cxt.fillStyle = `rgba(205, 228, 202,${opa.toString()})`;
-                    cxt.strokeStyle = `rgba(205, 228, 202,${opa.toString()})`;
+                    cxt.fillStyle = `rgba(${color},${opa.toString()})`;
+                    cxt.strokeStyle = `rgba(${color},${opa.toString()})`;
                     this.fill  = true;
                 }
                 else{

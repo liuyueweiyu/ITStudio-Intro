@@ -1,6 +1,6 @@
 function ahead(selector) {
 
-    let color = '#fff',
+    let color = 'rgb(227,62,86)',
         speedl = 0.03,
         speedu = 0.05,
         f = false;
