@@ -2,12 +2,13 @@ import React from "react";
 import Carmove from "./component/Carmove/Carmove.js";
 import Atom from "./component/Atom/Atom";
 import Pen from "./component/Pen/Pen";
+import Forwords from "./component/Fourwords/Fourwords";
 
 class Animation extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            stage:0
+            stage:3
         }
         setTimeout(() => {
             this.setState({
@@ -38,6 +39,10 @@ class Animation extends React.Component{
             case 2:
                 return(
                     <Pen />
+                );
+            case 3:
+                return(
+                    <Forwords />
                 );
             default:
                 break;

@@ -1,0 +1,18 @@
+@import "../variable.scss";
+
+.fourwords{
+    background: $one;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    #canvas{
+        position: absolute;
+        animation: canvasdisapear 1s linear forwards 7.3s;
+    }
+
+}
+
+@keyframes canvasdisapear{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}

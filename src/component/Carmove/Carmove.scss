@@ -1,11 +1,10 @@
 @import "../variable.scss";
 
-#canvas{
-    z-index: -1;
-    background: $one;
-    // background: radial-gradient(circle, rgb(248, 246, 248), rgb(204, 203, 204));
-}
 .carmove{
+    #canvas {
+        z-index: -1;
+        background: $one; 
+    }
     animation: disapear 0.2s linear 10.3s forwards;
     *{
         position: absolute;
