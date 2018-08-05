@@ -90,7 +90,6 @@ function carmove(selector) {
     move();
     setTimeout(() => {  //设置褪色
         seed = 0.005;
-        console.log(seed);
     }, 7000);
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Carmove from "./component/Carmove/Carmove.js";
 import Atom from "./component/Atom/Atom";
+import Pen from "./component/Pen/Pen";
 
 class Animation extends React.Component{
     constructor(props){
@@ -13,6 +14,16 @@ class Animation extends React.Component{
                 stage:1
             })
         }, 17800);
+        setTimeout(() => {
+            this.setState({
+                stage: 2
+            })
+        }, 34800);
+        setTimeout(() => {
+            this.setState({
+                stage: 3
+            })
+        }, 50100);
     }
     render(){
         switch (this.state.stage) {
@@ -23,8 +34,11 @@ class Animation extends React.Component{
             case 1:
                 return(
                     <Atom />
-                )
-        
+                );
+            case 2:
+                return(
+                    <Pen />
+                );
             default:
                 break;
         }

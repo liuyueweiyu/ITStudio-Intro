@@ -1,0 +1,100 @@
+@import "../variable.scss";
+.pen{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: $two;
+    .pen-body{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 20px;
+        height: 20px;
+        border: 2px $one solid;
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;     
+            top: 21px;
+            border: 10px transparent solid;
+            border-top-color: $one;    
+            position: absolute;
+            top: 21px;
+            border: 10px transparent solid;
+            border-top-color: $one;
+        }
+        span{
+            display: block;
+            width: 2px;
+            background-color: $one;
+            position: absolute;
+            top: 30px;
+            left: 9px;
+            animation: drawline-line 1s linear forwards 0.5s;
+        }
+        $bezier:.78,.09,.31,.89;
+        animation: drawline-body 1s linear forwards 0.5s,
+                   pen-move-left 2s cubic-bezier(#{$bezier}) forwards 5s,
+                   pen-move-right 2s cubic-bezier(#{$bezier}) forwards 10.8s,
+                   penfontdisapear 0.5s linear forwards 14.8s;
+    }   
+    h1,h2,h3{
+        position: absolute;
+        font-size: 44px;
+        color: $one;
+        font-weight: 200;
+        opacity: 0;
+    }
+    h1{
+        text-align: center;
+        top: 10vh;
+        left: 0;
+        right: 0;
+        animation: penfontapear 3s linear forwards 1.5s;
+    }
+    h2{
+        top: calc(50vh - 30px);
+        left: 20vh;
+        animation: penfontapear-correct 2s linear forwards 6.8s;
+    }
+    h3{
+        top: calc(50vh - 30px);
+        right: 20vh;
+        animation: penfontapear-correct 2s linear forwards 12.6s;
+    }
+}
+
+@keyframes drawline-line{
+    from{height: 0;}
+    to{height: 50vh;}
+}
+@keyframes drawline-body{
+    from{bottom: 0;}
+    to{bottom: 50vh;}
+}
+@keyframes penfontapear{
+    0%{opacity: 0;}
+    70%{opacity: 1;}
+}
+@keyframes penfontapear-correct{
+    0%{opacity: 1;}
+    70%{opacity: 1;}
+}
+@keyframes penfontdisapear{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+@keyframes pen-move-left{
+    0%{right: 0;}
+    50%{right: 80vw;}
+    100%{right: 0;}
+}
+@keyframes pen-move-right {
+    0% {left: 0;}
+    50% {left: 80vw;}
+    100% {left: 0;}
+}
