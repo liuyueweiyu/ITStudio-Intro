@@ -1,5 +1,4 @@
 function backgound(selector) {
-    // const color = "42, 46, 74";
     const color = "255,255,255"
     const fontcolor = "227,62,86";
     let counter = 0;

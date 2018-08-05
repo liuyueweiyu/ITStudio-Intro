@@ -2,6 +2,7 @@ import React from "react";
 import "./Pen.scss";
 
 class Pen extends React.Component{
+    
     render(){
         return (
             <div className="pen">
