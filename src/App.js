@@ -20,6 +20,9 @@ class App extends React.Component{
         setTimeout(() => {
             audio.play();
         }, 2800);   //Logo移动时间+变透明两个动画的时间+预留时间
+        setTimeout(() => {
+            audio.pause();
+        }, 67800);
     }
 
     render(){

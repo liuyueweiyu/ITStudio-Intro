@@ -3,6 +3,7 @@ import Carmove from "./component/Carmove/Carmove.js";
 import Atom from "./component/Atom/Atom";
 import Pen from "./component/Pen/Pen";
 import Forwords from "./component/Fourwords/Fourwords";
+import Final from "./component/Final/Final";
 
 class Animation extends React.Component{
     constructor(props){
@@ -14,17 +15,26 @@ class Animation extends React.Component{
             this.setState({
                 stage:1
             })
+            setTimeout(() => {
+                this.setState({
+                    stage: 2
+                });
+                setTimeout(() => {
+                    this.setState({
+                        stage: 3
+                    });
+                    setTimeout(() => {
+                        this.setState({
+                            stage: 4
+                        });
+                    }, 9100);
+                }, 14000);
+            }, 17000);
         }, 17800);
-        setTimeout(() => {
-            this.setState({
-                stage: 2
-            })
-        }, 34800);
-        setTimeout(() => {
-            this.setState({
-                stage: 3
-            })
-        }, 50100);
+
+
+
+
     }
     render(){
         switch (this.state.stage) {
@@ -43,6 +53,10 @@ class Animation extends React.Component{
             case 3:
                 return(
                     <Forwords />
+                );
+            case 4:
+                return (
+                    <Final />
                 );
             default:
                 break;

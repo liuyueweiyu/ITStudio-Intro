@@ -1,0 +1,139 @@
+@import "../variable.scss";
+
+.final{
+    position: relative;
+    background: $one;
+    width: 100vw;
+    height: 100vh;
+    animation: boom 1s linear 4s forwards;
+    h1,h2,h3,h4{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        font-size: 44px;
+        font-weight: 200;
+        
+        text-align: center;
+        line-height: 100vh;
+        opacity: 0;
+    }
+    .small{
+        position: absolute;
+        display: block;
+
+        
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: calc(50vh - 250px);
+        border-radius: 50%;
+       
+    }
+    .one{
+        width: 35px;
+        height: 35px;
+        background: $two;
+        animation: smallball 1s cubic-bezier(1, .23, .04, .75) forwards 0.3s;
+    }
+    .two{
+        width: 15px;
+        height: 15px;
+        background: $one;
+    }
+    h1,h2{
+        color: $two;
+    }
+    h3,h4{
+        color: $one;
+    }
+    h1{
+        animation: font-kirakira 1.5s linear  forwards;
+    }
+    h2{
+        animation: font-kirakira 2.5s linear forwards 1.5s;
+    }
+    h3{
+        animation: font-kirakira 2s linear forwards 4s;
+    }
+    h4{
+        animation: font-kirakira 2.5s linear forwards 6s;
+    }
+    .boom{
+        top: calc(50vh - 275px);
+        padding: 0 calc(50vw - 50px);
+        position: absolute;
+        
+    }
+}
+.all{
+    background: $two;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin: auto;
+    img,p{
+        position: absolute;
+    }
+    img{
+        // width: auto;
+        bottom: 55vh;
+        width: 460px;
+        height: auto;
+        left: calc(50vw - 230px);
+    }
+    p{
+        font-weight: 200;
+        font-size: 44px;
+        color: $one;
+        top: 55vh;
+        width: 100vw;
+        text-align: center;
+    }
+    animation: allapear 1s linear forwards;
+}
+@keyframes allapear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes font-kirakira{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes smallball{
+    0%{
+        top: calc(50vh - 250px);
+    }
+    67%{
+        top: calc(50vh - 150px);    
+    }
+    100%{
+        top: calc(50vh - 250px);
+    }
+}
+
+@keyframes boom{
+    from{
+        background: $two;
+    }
+    to{
+        background: $two;
+    }
+}

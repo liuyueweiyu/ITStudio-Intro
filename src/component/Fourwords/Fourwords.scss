@@ -6,12 +6,17 @@
     width: 100vw;
     height: 100vh;
     #canvas{
+        opacity: 0;
         position: absolute;
-        animation: canvasdisapear 1s linear forwards 7.3s;
+        animation: canvasapear  2s linear forwards,
+                canvasdisapear 0.3s linear forwards 8.8s;
     }
 
 }
-
+@keyframes canvasapear{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
 @keyframes canvasdisapear{
     0%{opacity: 1;}
     100%{opacity: 0;}

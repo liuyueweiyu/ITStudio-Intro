@@ -84,7 +84,7 @@ function backgound(selector) {
     for(let i = 0;i<text.length;i++)
         setTimeout(() => {
             pushAtom(text[i],tx[i]/100*curWinWidth,ty[i]/100*curWinHeight);
-        }, 300+2000*i);
+        },2000+2000*i);
 
     (function move() {
         oGc.clearRect(0, 0, width, height);
