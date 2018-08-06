@@ -13,23 +13,23 @@
         margin: auto;
         width: 20px;
         height: 20px;
-        border: 2px $one solid;
+        border: 2px $three solid;
         &::after{
             content: "";
             display: block;
             position: absolute;     
             top: 21px;
             border: 10px transparent solid;
-            border-top-color: $one;    
+            border-top-color: $three;
             position: absolute;
             top: 21px;
             border: 10px transparent solid;
-            border-top-color: $one;
+            border-top-color: $three;
         }
         span{
             display: block;
             width: 2px;
-            background-color: $one;
+            background-color: $three;
             position: absolute;
             top: 30px;
             left: 9px;
@@ -59,12 +59,16 @@
     }
     h2{
         top: calc(50vh - 30px);
-        left: 20vh;
+        left: 0;
+        right: 50vw;
+        text-align: center;
         animation: penfontapear-correct 1.5s linear forwards 6.8s;
     }
     h3{
         top: calc(50vh - 30px);
-        right: 20vh;
+        left: 50vw;
+        right: 0;
+        text-align: center;
         animation: penfontapear-correct 1.5s linear forwards 11.1s;
     }
     .expand{

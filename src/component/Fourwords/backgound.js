@@ -79,7 +79,7 @@ function backgound(selector) {
             atom.push(oAtom);
     }
     const text = ["合作","热爱","提高","惊喜"];
-    const tx = [8,78,24,60];
+    const tx = [45,78,24,60];
     const ty = [6,24,69,60];
     for(let i = 0;i<text.length;i++)
         setTimeout(() => {

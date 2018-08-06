@@ -76,6 +76,7 @@
     margin: auto;
     img,p{
         position: absolute;
+        animation: allapear 1s linear forwards;
     }
     img{
         // width: auto;
@@ -83,16 +84,17 @@
         width: 460px;
         height: auto;
         left: calc(50vw - 230px);
+        
     }
     p{
         font-weight: 200;
-        font-size: 44px;
+        font-size: 30px;
         color: $one;
         top: 55vh;
         width: 100vw;
         text-align: center;
     }
-    animation: allapear 1s linear forwards;
+    
 }
 @keyframes allapear{
     0%{

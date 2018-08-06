@@ -38,7 +38,7 @@ module.exports = {
                    loader:'html-loader'
                },
                {
-                   test:/\.(jpg|png|gif|svg|flac)$/i,
+                   test:/\.(jpg|png|gif|svg|flac|ico)$/i,
                    loader:'url-loader',
                    query:{
                        limit:20000,
@@ -53,13 +53,14 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html',
             chunks: ['index'],
+            favicon:'./src/component/20180806050252871.ico'
             // chunks:['test'],
         }),
     ],
     mode: 'production',
     stats: {
         colors: true,
-        assets: false,
+        // assets: false,
         modules: false,
         children: false,
         chunks: false,
