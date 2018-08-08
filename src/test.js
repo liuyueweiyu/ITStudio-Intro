@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
-import "./component/Utils/reset.scss";
-import App from "./component/Pen/Pen";
+import "./component/Utils/main.scss";
+import App from "./component/Atom/Atom.js";
 
 
 render(

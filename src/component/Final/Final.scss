@@ -1,44 +1,30 @@
 .final{
     position: relative;
     background: $one;
-    width: 100vw;
-    height: 100vh;
+    @extend .fullscreen;
     animation: boom 1s linear 4s forwards;
     h1,h2,h3,h4{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        margin: auto;
-        font-size: 44px;
-        font-weight: 200;
-        
+        @extend .absolute;
+        @extend .fontstyle;
         text-align: center;
         line-height: 100vh;
-        opacity: 0;
     }
     .small{
         position: absolute;
         display: block;
-
-        
         left: 0;
         right: 0;
         margin: 0 auto;
         top: calc(50vh - 250px);
         border-radius: 50%;
-       
     }
     .one{
-        width: 35px;
-        height: 35px;
+        @include box(35px,35px);
         background: $two;
         animation: smallball 1s cubic-bezier(1, .23, .04, .75) forwards 0.3s;
     }
     .two{
-        width: 15px;
-        height: 15px;
+        @include box(15px, 15px);
         background: $one;
     }
     h1,h2{
@@ -68,16 +54,14 @@
 }
 .all{
     background: $two;
-    width: 100vw;
-    height: 100vh;
+    @extend .fullscreen;
     position: relative;
     margin: auto;
     img,p{
         position: absolute;
-        animation: allapear 1s linear forwards;
+        animation: apeared 1s linear forwards;
     }
     img{
-        // width: auto;
         bottom: 55vh;
         width: 460px;
         height: auto;
@@ -94,14 +78,7 @@
     }
     
 }
-@keyframes allapear{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+
 @keyframes font-kirakira{
     0%{
         opacity: 0;

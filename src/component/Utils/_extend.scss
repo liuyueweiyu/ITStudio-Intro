@@ -1,0 +1,23 @@
+.absolute{      //绝对定位
+    position: absolute;
+    @include position(0,0,0,0);
+    margin: auto;
+}
+.fullscreen{    //占满屏幕
+    width: 100vw;
+    height: 100vh;
+}
+.zerobox{       //0-box
+    width: 0px;
+    height: 0px;
+}
+.flexcenter{    //flex水平垂直居中
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fontstyle{     //基础字体样式
+    font-size: 44px;
+    font-weight: 200;
+    opacity: 0;
+}

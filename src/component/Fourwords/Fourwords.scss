@@ -1,21 +1,12 @@
 .fourwords{
     background: $one;
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    @extend .fullscreen;
     #canvas{
         opacity: 0;
         position: absolute;
-        animation: canvasapear  2s linear forwards,
-                canvasdisapear 0.3s linear forwards 8.8s;
+        animation: apeared 2s linear forwards,
+                   disapear 0.3s linear forwards 8.8s;
     }
 
-}
-@keyframes canvasapear{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-@keyframes canvasdisapear{
-    0%{opacity: 1;}
-    100%{opacity: 0;}
 }

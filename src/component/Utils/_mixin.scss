@@ -1,0 +1,11 @@
+@mixin position($top, $left, $bottom, $right) {
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}
+
+@mixin box ($width:100px,$height:100px){
+    width: $width;
+    height: $height;
+}

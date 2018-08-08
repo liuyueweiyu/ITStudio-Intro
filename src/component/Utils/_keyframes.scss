@@ -1,0 +1,27 @@
+@keyframes apear {
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes disapear {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes apeared {
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+

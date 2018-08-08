@@ -8,62 +8,49 @@
         position: absolute;
     }
     .go-ahead{
-        opacity: 0;
         top:calc(25vh - 35px);
-        animation: fontappear 4s ease-in-out 2.8s;
+        animation: apear 4s ease-in-out 2.8s;
     }
     .go-ahead,.ignore{
         left: 0;
         right: 0;
         text-align: center;
-        font-size: 40px;
-        font-weight:200; 
+        @extend .fontstyle;
         color: $two;
     }
     .ignore{
         bottom: calc(25vh - 35px);
-        opacity: 0;
         right: 20px;
-        animation: fontappeared 3.7s ease-in-out 6.8s forwards;
+        animation: apeared 3.7s ease-in-out 6.8s forwards;
         span{
             color: $three;
         }
         
     }
     .dispear {
+        @extend .fullscreen;
         opacity: 0;
-        width: 100vw;
-        height: 100vh;
         z-index: 100;
         background: $one;
-        animation: fontappeared 0.5s ease-in-out 13.6s forwards;
+        animation: apeared 0.5s ease-in-out 13.6s forwards;
     }
 }
 
 .idea{
     background: $one;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    *{
-        
-        font-size: 44px;
-        font-weight: 200;
-    }
+    @extend .fullscreen;
+    @extend .flexcenter;
     h1,h2{
-        opacity: 0;
+        @extend .fontstyle;
     }
     h1{
         color: $two;
-        animation: fontappear 4s ease-in-out ;
+        animation: apear 4s ease-in-out ;
     }
     h2{
         color: $three;
         display: inline-block;
-        width: 150px;
-        height: 150px;
+        @include box(150px,150px);
         line-height: 150px;
         text-align: center;
         vertical-align: middle;
@@ -72,39 +59,26 @@
 }
 
 .box{
-    width: 100px;
-    height: 100px;
-}
-@keyframes disapear{
-    to{opacity: 0;}
+    @include box;
 }
 
-@keyframes fontappear{
-    70%{opacity: 1;}
-    100%{opacity: 0;}
-}
 
-@keyframes fontappeared{
-    70%{opacity: 1;}
-    100%{opacity: 1;}
-}
-
-@keyframes toBall{
+@keyframes toBall {
     55.3% {
         opacity: 1;
         color: $three;
         background: $one;
     }
-    65%{
+    65% {
         height: 150px;
         width: 150px;
         color: transparent;
         background: $three;
     }
-    70.7%{
+    70.7% {
         border-radius: 50%;
     }
-    100%{
+    100% {
         width: 0;
         height: 0;
         background: $three;
@@ -112,12 +86,4 @@
         opacity: 1;
         color: transparent;
     }
-    // 100%{
-    //     width: 10px;
-    //     height: 10px;
-    //     background: $two;
-    //     border-radius: 50%;
-    //     opacity: 1;
-    //     color: transparent;
-    // }
 }

@@ -53,7 +53,7 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html',
             chunks: ['index'],
-            favicon:'./src/component/20180806050252871.ico'
+            favicon:'./src/component/20180806050252871.ico',
             // chunks:['test'],
         }),
     ],

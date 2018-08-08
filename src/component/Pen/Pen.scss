@@ -1,26 +1,15 @@
 .pen{
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    @extend .fullscreen;
     background: $two;
     .pen-body{
-        position: absolute;
-        top:0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 20px;
-        height: 20px;
+        @extend .absolute;
+        @include box(20px,20px);
         border: 2px $three solid;
         &::after{
             content: "";
             display: block;
             position: absolute;     
-            top: 21px;
-            border: 10px transparent solid;
-            border-top-color: $three;
-            position: absolute;
             top: 21px;
             border: 10px transparent solid;
             border-top-color: $three;
@@ -44,17 +33,15 @@
     }   
     h1,h2,h3{
         position: absolute;
-        font-size: 44px;
         color: $one;
-        font-weight: 200;
-        opacity: 0;
+        @extend .fontstyle;
     }
     h1{
         text-align: center;
         top: 10vh;
         left: 0;
         right: 0;
-        animation: penfontapear 3s linear forwards 1.5s;
+        animation: apear 3s linear forwards 1.5s;
     }
     h2{
         top: calc(50vh - 30px);
@@ -73,12 +60,7 @@
     .expand{
         height: 100vh;
         width: 2px;
-        position: absolute;
-        top:0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
+        @extend .absolute;
         background: $one;
         animation: expands-line 0.5s linear forwards;
     }
@@ -92,17 +74,10 @@
     from{bottom: 0;}
     to{bottom: 50vh;}
 }
-@keyframes penfontapear{
-    0%{opacity: 0;}
-    70%{opacity: 1;}
-}
+
 @keyframes penfontapear-correct{
     0%{opacity: 1;}
     70%{opacity: 1;}
-}
-@keyframes penfontdisapear{
-    from{opacity: 1;}
-    to{opacity: 0;}
 }
 
 @keyframes pen-move-left{

@@ -2,6 +2,7 @@ import React from "react";
 import moveline from "./moveline.js";
 import Logo from "../Logo/Logo"
 import Soap from "../Soapbubble/Soapbubble";
+import color from "../Utils/variable.js";
 
 class Carmove extends React.Component{
     constructor(props){
@@ -58,7 +59,7 @@ class Carmove extends React.Component{
                         <React.Fragment>
                             <h1>以及不经意间迸发的</h1>
                             {this.state.soap &&
-                            <Soap className = 'Soap' bg='#fff'/>
+                            <Soap className = 'Soap' bg={color.two}/>
                             }
                             {!this.state.soap &&
                                 <div className='box'></div>
