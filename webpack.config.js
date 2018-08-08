@@ -38,7 +38,7 @@ module.exports = {
                    loader:'html-loader'
                },
                {
-                   test:/\.(jpg|png|gif|svg|flac|ico)$/i,
+                   test:/\.(jpg|png|gif|svg|mp3|ico)$/i,
                    loader:'url-loader',
                    query:{
                        limit:20000,

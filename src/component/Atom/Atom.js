@@ -1,5 +1,4 @@
 import React from "react";
-import "./Atom.scss";
 import ahead from "./ahead.js";
 import Selectbox from "../Selectbox/Selectbox";
 

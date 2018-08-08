@@ -1,7 +1,7 @@
 import React from "react";
 import moveline from "./moveline.js";
 import Logo from "../Logo/Logo"
-import "./Carmove.scss";
+// import "./Carmove.scss";
 import Soap from "../Soapbubble/Soapbubble";
 
 class Carmove extends React.Component{

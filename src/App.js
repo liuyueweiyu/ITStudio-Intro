@@ -37,7 +37,7 @@ class App extends React.Component{
                     <Animation />
                 }
                 <audio id="music" preload="true">
-                    <source src={require("./JustBreathe.flac")}/>
+                    <source src={require("./bgm.mp3")}/>
                 </audio>
             </React.Fragment>
         );

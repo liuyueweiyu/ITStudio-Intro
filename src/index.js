@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import "./component/Utils/reset.scss";
+import "./component/Utils/main.scss";
 import App from "./App";
 
 
