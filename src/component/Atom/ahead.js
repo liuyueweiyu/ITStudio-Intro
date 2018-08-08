@@ -1,10 +1,13 @@
+import color from "../Utils/variable.js";
+
 function ahead(selector) {
 
-    let color = 'rgb(227,62,86)',
-        speedl = 0.03,
+    // let color = 'rgb(227,62,86)',
+    let speedl = 0.03,
         speedu = 0.05,
         f = false;
-
+    console.log(color);
+    
     let curWinWidth = window.innerWidth,
         curWinHeight = window.innerHeight;
 
@@ -42,7 +45,7 @@ function ahead(selector) {
         },
         draw: function (cxt) {
             cxt.beginPath();
-            cxt.fillStyle = color;
+            cxt.fillStyle = `rgb(${color.three})`;
             cxt.arc(this.x, this.y + this.r, this.r, 0, Math.PI * 2, false);
             cxt.fill();
             cxt.closePath();

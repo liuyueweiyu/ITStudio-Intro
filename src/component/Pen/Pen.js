@@ -13,7 +13,6 @@ class Pen extends React.Component{
                 pen:false
             });
         }, 13100);
-
     }
 
     render(){

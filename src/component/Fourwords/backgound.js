@@ -1,7 +1,7 @@
+import color from "../Utils/variable.js";
+
+
 function backgound(selector) {
-    const color = "255,255,255"
-    const fontcolor = "227,62,86";
-    let counter = 0;
     let curWinWidth = window.innerWidth,
         curWinHeight = window.innerHeight;
 
@@ -15,7 +15,7 @@ function backgound(selector) {
         height = oC.height,
         oGc = oC.getContext('2d');
 
-  function random(min, max) {
+    function random(min, max) {
         return Math.random() * (max - min) + min;
     }
     let Atom = function () {};
@@ -27,8 +27,8 @@ function backgound(selector) {
             this.y = random(0,curWinHeight);
             this.sy = this.y;
             this.content = "";
-            this.opa = random(0,1);
-            this.r = random(6, 18);
+            // this.opa = random(0,1);
+            this.r = random(6, 120);
             this.v = random(0.10, 0.16);
             this.mx = random(-1,1);
             this.my = random(-1,1);
@@ -36,18 +36,18 @@ function backgound(selector) {
         draw: function (cxt) {
             cxt.beginPath();
             if (this.content == ""){
-                cxt.fillStyle = `rgba(${color},${this.opa})`;
+                cxt.fillStyle = `rgba(${color.two},${1- (this.r-6)/57})`;
                 cxt.arc(this.x + this.mx, this.y + this.my + this.r, this.r, 0, Math.PI * 2, false);
                 cxt.fill();
                 cxt.closePath();
                 this.update(cxt);
             }
             else{
-                cxt.fillStyle = `rgb(${fontcolor})`;
+                cxt.fillStyle = `rgb(${color.three})`;
                 cxt.arc(this.x + this.mx, this.y + this.my + this.r, this.r, 0, Math.PI * 2, false);
                 cxt.fill();
                 cxt.font = "normal 44px 微软雅黑";
-                cxt.strokeStyle = `rgb(${fontcolor})`;
+                cxt.strokeStyle = `rgb(${color.three})`;
                 cxt.fillStyle = `rgb(255,255,255)`;
                 cxt.fillText(this.content, this.x + this.mx - 48, this.y + this.my + 85 ); //绘制文字
                 cxt.stroke();
@@ -72,7 +72,7 @@ function backgound(selector) {
     }
 
     let atom = [];
-    const atomCount = 100;
+    const atomCount = 40;
     for (let i = 0; i < atomCount; i++) {
             let oAtom = new Atom();
             oAtom.init();

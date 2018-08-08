@@ -1,4 +1,4 @@
-@import "../variable.scss";
+@import "../Utils/variable.scss";
 
 @mixin movep($top, $left, $bottom, $right) {
     top: $top;

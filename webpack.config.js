@@ -57,7 +57,7 @@ module.exports = {
             // chunks:['test'],
         }),
     ],
-    mode: 'production',
+    mode: 'development',
     stats: {
         colors: true,
         // assets: false,

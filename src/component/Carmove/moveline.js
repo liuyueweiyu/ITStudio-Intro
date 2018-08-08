@@ -1,11 +1,11 @@
+import color from "../Utils/variable.js";
+
 function carmove(selector) {
     let atom = [[], [], [], []];
     let Speed = [20,20,20,20];
     let opa = 1;
     let seed = 0;
-    const color = "227,62,86";
     const atomCount = 60;
-
     let curWinWidth = window.innerWidth,
         curWinHeight = window.innerHeight;
 
@@ -37,13 +37,13 @@ function carmove(selector) {
             if (tj) {
                 cxt.beginPath();
                 if(this.interst){
-                    cxt.fillStyle = `rgba(${color},${opa.toString()})`;
-                    cxt.strokeStyle = `rgba(${color},${opa.toString()})`;
+                    cxt.fillStyle = `rgba(${color.three},${opa.toString()})`;
+                    cxt.strokeStyle = `rgba(${color.three},${opa.toString()})`;
                     this.fill  = true;
                 }
                 else{
-                    cxt.fillStyle = `rgba(255,255,255,1)`;
-                    cxt.strokeStyle = `rgba(255,255,255,1)`;
+                    cxt.fillStyle = `rgba(${color.two},1)`;
+                    cxt.strokeStyle = `rgba(${color.two},1)`;
                 }
                 
                 cxt.rect(this.x, this.y, this.w, 20);
