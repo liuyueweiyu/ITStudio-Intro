@@ -1,8 +1,6 @@
 import color from "../Utils/variable.js";
 
 function ahead(selector) {
-
-    // let color = 'rgb(227,62,86)',
     let speedl = 0.03,
         speedu = 0.05,
         f = false;

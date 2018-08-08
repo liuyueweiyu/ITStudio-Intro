@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Final.scss";
 import Soapbubble from "../Soapbubble/Soapbubble";
 
 class Final extends React.Component{

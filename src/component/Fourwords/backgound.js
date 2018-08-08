@@ -1,6 +1,5 @@
 import color from "../Utils/variable.js";
 
-
 function backgound(selector) {
     let curWinWidth = window.innerWidth,
         curWinHeight = window.innerHeight;

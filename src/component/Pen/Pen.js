@@ -1,6 +1,4 @@
 import React from "react";
-// import "./Pen.scss";
-
 class Pen extends React.Component{
     
     constructor(props){

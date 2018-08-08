@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Fourwords.scss";
 import backgound from "./backgound.js";
 
 class Fourwords extends React.Component{

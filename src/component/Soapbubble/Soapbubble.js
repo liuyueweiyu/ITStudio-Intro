@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Soapbubble.scss";
 
 class Soapbble extends React.Component{
     constructor(props){
