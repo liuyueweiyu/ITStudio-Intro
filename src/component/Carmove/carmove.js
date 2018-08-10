@@ -34,7 +34,7 @@ class Carmove extends React.Component{
                     seconde: true
                 });
             }, 4000);
-        }, 10500);
+        }, 14800);
         
     }
     componentDidMount() {
@@ -45,8 +45,10 @@ class Carmove extends React.Component{
             return(
                 <div className='carmove'>
                     { this.state.doLogo && <Logo />}
+                    <h3 className="go-ahead-en">Life is always in a hurry</h3>
                     <h1 className='go-ahead'>人们总是匆忙前行</h1>
                     <canvas id='canvas'></canvas>
+                    <h4 className='ignore-en'>But often ignore <span>interest</span></h4>
                     <h2 className='ignore'>却常常忽略<span>兴趣</span></h2>
                     <div className='dispear'></div>
                 </div>
@@ -57,6 +59,7 @@ class Carmove extends React.Component{
                     {this.state.first && 
                     (
                         <React.Fragment>
+                            <h3>And inadvertently bursting</h3>
                             <h1>以及不经意间迸发的</h1>
                             {this.state.soap &&
                             <Soap className = 'Soap' bg={color.two}/>
@@ -67,7 +70,12 @@ class Carmove extends React.Component{
                         </React.Fragment>
                     )
                     }
-                    {this.state.seconde && <h2>灵感</h2>}
+                    {this.state.seconde && (
+                        <React.Fragment>
+                            <h2>Inspiration</h2>
+
+                        </React.Fragment>
+                    )}
                 </div>
             );
     }

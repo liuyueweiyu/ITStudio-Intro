@@ -14,23 +14,23 @@ class Animation extends React.Component{
         setTimeout(() => {
             this.setState({
                 stage:1
-            })
-            setTimeout(() => {
-                this.setState({
-                    stage: 2
-                });
-                setTimeout(() => {
-                    this.setState({
-                        stage: 3
-                    });
-                    setTimeout(() => {
-                        this.setState({
-                            stage: 4
-                        });
-                    }, 9100);
-                }, 14000);
-            }, 17000);
-        }, 17800);
+            });
+            // setTimeout(() => {
+            //     this.setState({
+            //         stage: 2
+            //     });
+            //     setTimeout(() => {
+            //         this.setState({
+            //             stage: 3
+            //         });
+            //         setTimeout(() => {
+            //             this.setState({
+            //                 stage: 4
+            //             });
+            //         }, 9100);
+            //     }, 14000);
+            // }, 17000);
+        }, 21800);
 
 
 

@@ -3,29 +3,49 @@
         z-index: -1;
         background: $one; 
     }
-    animation: disapear 0.2s linear 10.3s forwards;
+    animation: disapear 0.2s linear 14.6s forwards;
     *{
         position: absolute;
     }
+    
+    .go-ahead,
+    .go-ahead-en {
+        animation: apear 6s ease-in-out 2.8s;
+    }
+
     .go-ahead{
         top:calc(25vh - 35px);
-        animation: apear 4s ease-in-out 2.8s;
     }
-    .go-ahead,.ignore{
+    .go-ahead-en{
+        top:calc(25vh - 90px);
+    }
+    .go-ahead,
+    .ignore,
+    .go-ahead-en,
+    .ignore-en {
         left: 0;
         right: 0;
         text-align: center;
         @extend .fontstyle;
         color: $two;
     }
-    .ignore{
-        bottom: calc(25vh - 35px);
+
+    .ignore,
+    .ignore-en {
         right: 20px;
-        animation: apeared 3.7s ease-in-out 6.8s forwards;
+        animation: apeared 6s ease-in-out 8.8s forwards;
         span{
             color: $three;
         }
         
+    }
+    .ignore{
+        bottom: calc(25vh - 90px);
+        
+    }
+    .ignore-en{
+        bottom: calc(25vh - 35px);
+        white-space: pre-wrap;
     }
     .dispear {
         @extend .fullscreen;
@@ -40,10 +60,12 @@
     background: $one;
     @extend .fullscreen;
     @extend .flexcenter;
-    h1,h2{
+    flex-direction: column;
+    h1,h2,h3,h4{
         @extend .fontstyle;
+        margin: 20px;
     }
-    h1{
+    h1,h3{
         color: $two;
         animation: apear 4s ease-in-out ;
     }

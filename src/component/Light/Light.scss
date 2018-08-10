@@ -21,9 +21,6 @@ $top-status:$h/2 - $width/2;
     }
 }
 
-body{
-    animation:tolight 1s linear forwards 2.25s;
-}
 @keyframes fall{
     0%{
         top: $top-status;
