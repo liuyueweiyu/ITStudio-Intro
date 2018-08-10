@@ -4,8 +4,10 @@ class Soapbble extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            bg:props.bg || '#333'
+            bg: `rgb(${props.bg})` || '#333'
         }
+        // console.log(11);
+        console.log(this.state.bg);
     }
 
     render(){

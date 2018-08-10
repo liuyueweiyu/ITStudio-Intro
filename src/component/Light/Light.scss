@@ -1,0 +1,48 @@
+$w:400px;
+$h:300px;
+$width:35px;
+$top-status:$h/2 - $width/2;
+.light{
+    @include box($w, $h);
+    // background: $three;
+    @extend .absolute;
+    position: relative;
+    .ball{
+        position: absolute;
+        background: $two;
+        @include box($width,$width);
+        border-radius: 50%;
+        top:$top-status;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        animation: fall 0.75s cubic-bezier(.76,.01,.27,1) 3,
+                   todark 1s linear forwards 2.25s;
+    }
+}
+
+body{
+    animation:tolight 1s linear forwards 2.25s;
+}
+@keyframes fall{
+    0%{
+        top: $top-status;
+        height: $width;
+    }
+    50%{
+        top:$top-status + 200px;
+        height: $width*.7;
+    }
+    100%{
+        top: $top-status;
+        height: $width;
+    }
+}
+@keyframes tolight{
+    0%{background: $two;}
+    100%{background: $two;}
+}
+@keyframes todark{
+    0%{background: $one;}
+    100%{background: $one;}    
+}
