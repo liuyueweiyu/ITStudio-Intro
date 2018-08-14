@@ -60,7 +60,7 @@
     background: $one;
     @extend .fullscreen;
     @extend .flexcenter;
-    flex-direction: column;
+    // flex-direction: column;
     h1,h2,h3,h4{
         @extend .fontstyle;
         margin: 20px;
@@ -76,7 +76,7 @@
         line-height: 150px;
         text-align: center;
         vertical-align: middle;
-        animation: toBall 3.3s ease-in-out  forwards;
+        animation: toBall 4s ease-in-out  forwards;
     }
 }
 

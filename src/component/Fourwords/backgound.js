@@ -35,7 +35,7 @@ function backgound(selector) {
         draw: function (cxt) {
             cxt.beginPath();
             if (this.content == ""){
-                cxt.fillStyle = `rgba(${color.two},${1- (this.r-6)/57})`;
+                cxt.fillStyle = `rgba(${color.two},${(1- (this.r-6)/57)/2})`;
                 cxt.arc(this.x + this.mx, this.y + this.my + this.r, this.r, 0, Math.PI * 2, false);
                 cxt.fill();
                 cxt.closePath();
@@ -71,19 +71,19 @@ function backgound(selector) {
     }
 
     let atom = [];
-    const atomCount = 40;
+    const atomCount = 100;
     for (let i = 0; i < atomCount; i++) {
             let oAtom = new Atom();
             oAtom.init();
             atom.push(oAtom);
     }
-    const text = ["合作","热爱","提高","惊喜"];
-    const tx = [45,78,24,60];
-    const ty = [6,24,69,60];
-    for(let i = 0;i<text.length;i++)
-        setTimeout(() => {
-            pushAtom(text[i],tx[i]/100*curWinWidth,ty[i]/100*curWinHeight);
-        },2000+2000*i);
+    // const text = ["合作","热爱","提高","惊喜"];
+    // const tx = [45,78,24,60];
+    // const ty = [6,24,69,60];
+    // for(let i = 0;i<text.length;i++)
+    //     setTimeout(() => {
+    //         pushAtom(text[i],tx[i]/100*curWinWidth,ty[i]/100*curWinHeight);
+    //     },2000+2000*i);
 
     (function move() {
         oGc.clearRect(0, 0, width, height);

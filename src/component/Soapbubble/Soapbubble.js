@@ -6,8 +6,6 @@ class Soapbble extends React.Component{
         this.state = {
             bg: `rgb(${props.bg})` || '#333'
         }
-        // console.log(11);
-        console.log(this.state.bg);
     }
 
     render(){

@@ -13,7 +13,7 @@ class Light extends React.Component{
                 ball: true
             });
             ballmove("#canvas");
-        }, 2250);
+        }, 750);
     }
 
     componentDidMount() {

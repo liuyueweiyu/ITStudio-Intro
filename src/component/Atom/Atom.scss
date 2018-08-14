@@ -22,7 +22,9 @@ $time:1;
     }
     .third{
         @include box;
-        animation: tobig 1s linear forwards;
+        animation: tobig 1s linear forwards,
+                   tosmall 1s linear forwards 1s;
+        // animation-direction:alternate;
     }
     .second{
         @extend .fullscreen;
@@ -41,7 +43,7 @@ $time:1;
         animation: apear 5s linear 2.2s;
     }
     h2{
-        animation: apear 5.5s linear 9s;
+        animation: apear 5.5s linear 11s;
     }
 }
 
@@ -97,5 +99,15 @@ $range:25px;
     to {
         border-radius: 0%;
         @include box(200vw, 200vw);
+    }
+}
+
+@keyframes tosmall{
+    50%{
+        border-radius: 50%;
+    }
+    100%{
+        border-radius: 100%;
+        @include box(100px,100px);
     }
 }

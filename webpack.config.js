@@ -5,8 +5,8 @@ const dev = Boolean(process.env.WEBPACK_SERVE);
 
 module.exports = {
     entry:{  
-        // index:["./src/index.js"]
-        test:["./src/test.js"]
+        index:["./src/index.js"]
+        // test:["./src/test.js"]
 
     },
     output:{
@@ -52,9 +52,9 @@ module.exports = {
         new htmlwebpackplugin({
             filename: 'index.html',
             template: './src/index.html',
-            // chunks: ['index'],
+            chunks: ['index'],
             favicon:'./src/component/20180806050252871.ico',
-            chunks:['test'],
+            // chunks:['test'],
         }),
     ],
     mode: 'development',

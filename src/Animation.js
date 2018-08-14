@@ -15,10 +15,10 @@ class Animation extends React.Component{
             this.setState({
                 stage:1
             });
-            // setTimeout(() => {
-            //     this.setState({
-            //         stage: 2
-            //     });
+            setTimeout(() => {
+                this.setState({
+                    stage: 2
+                });
             //     setTimeout(() => {
             //         this.setState({
             //             stage: 3
@@ -29,8 +29,8 @@ class Animation extends React.Component{
             //             });
             //         }, 9100);
             //     }, 14000);
-            // }, 17000);
-        }, 21800);
+            }, 17500);
+        }, 22500);
 
 
 
@@ -48,7 +48,8 @@ class Animation extends React.Component{
                 );
             case 2:
                 return(
-                    <Pen />
+                    // <Pen />
+                    <Forwords />
                 );
             case 3:
                 return(

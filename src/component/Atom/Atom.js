@@ -7,6 +7,7 @@ class Atom extends React.Component{
     constructor(props){
         super(props);
         this.state = {
+            canvas:true,
             first:true,
             second:false,
             third:false,
@@ -14,15 +15,21 @@ class Atom extends React.Component{
         }
         setTimeout(() => {
             this.setState({
-                first:false,
-                second:true
+                first: false,
+                third: true
             });
             setTimeout(() => {
                 this.setState({
-                    second: false,
-                    third: true
+                    canvas: false
                 });
-            }, 7900);
+            }, 1500);
+            setTimeout(() => {
+                this.setState({
+                    first:false,
+                    second:true,
+                    third:false
+                });
+            }, 2500);
         }, 7200);
     }
 
@@ -33,7 +40,7 @@ class Atom extends React.Component{
     render(){
         return (
             <div className="atom">
-                <canvas id="canvas"></canvas>
+                {this.state.canvas && <canvas id="canvas"></canvas>}
                 <div className="outer">
                     {this.state.first &&(
                         <div className="first"></div>
@@ -48,7 +55,7 @@ class Atom extends React.Component{
                     )}
                 </div>
                 <h1>人们总是独自前进</h1>
-                <h2>却时常忘记选择</h2>
+                <h2>也时常恐惧选择</h2>
             </div>
         );
     }

@@ -54,7 +54,8 @@ $line-height:2px;
         animation: blcokmove-1 1s cubic-bezier(#{$bezier}) forwards #{$line-time}s,
                    blockdrop-1 1s linear forwards #{$line-time+1}s,
                    selectblock 2s linear forwards #{$line-time+2}s 2,
-                   tocenter 1s cubic-bezier(#{$bezier}) forwards #{$line-time+6}s;
+                   tocenter 1s cubic-bezier(#{$bezier}) forwards #{$line-time+6}s,
+                   tocenterball 0.5s linear forwards #{$line-time+7}s;
         }
     .selectbox-block:nth-of-type(2) {
         left: 51%;
@@ -62,7 +63,8 @@ $line-height:2px;
         animation: blcokmove-2 1s cubic-bezier(#{$bezier}) forwards #{$line-time}s,
                    blockdrop-1 1s linear forwards #{$line-time+1}s,
                    selectblock 2s linear forwards #{$line-time+2.5}s 2,
-                   tocenter 1s cubic-bezier(#{$bezier}) forwards #{$line-time+6}s;
+                   tocenter 1s cubic-bezier(#{$bezier}) forwards #{$line-time+6}s,
+                   tocenterball 0.5s linear forwards #{$line-time+7}s;
     }
     .selectbox-block:nth-of-type(3) {
         top: 51%;
@@ -70,7 +72,8 @@ $line-height:2px;
         animation: blcokmove-3 1s cubic-bezier(#{$bezier}) forwards #{$line-time}s,
                    blockdrop-2 1s linear forwards #{$line-time+1}s,
                    selectblock 2s linear forwards #{$line-time+2.8}s 2,
-                   tocenter 1s cubic-bezier(#{$bezier}) forwards #{$line-time+6}s;
+                   tocenter 1s cubic-bezier(#{$bezier}) forwards #{$line-time+6}s,
+                   tocenterball 0.5s linear forwards #{$line-time+7}s;
     }
     .selectbox-block:nth-of-type(4) {
         top: 51%;
@@ -79,7 +82,8 @@ $line-height:2px;
         animation: blcokmove-4 1s cubic-bezier(#{$bezier}) forwards #{$line-time}s,
                    blockdrop-2 1s linear forwards #{$line-time+1}s,
                    selectblock 2s linear forwards #{$line-time+2}s 2,
-                   tocenter 1s cubic-bezier(#{$bezier}) forwards #{$line-time+6}s;
+                   tocenter 1s cubic-bezier(#{$bezier}) forwards #{$line-time+6}s,
+                   tocenterball 0.5s linear forwards #{$line-time+7}s;
     }
 }
 
@@ -148,18 +152,18 @@ $line-height:2px;
 }
 
 @keyframes tocenter{
-    70%{
-        top: 25%;
-        border-radius: 0%;
+    100%{
         left: 25%;
-        width: 49%;
-        height: 49%;
+    }
+}
+
+@keyframes tocenterball{
+    50%{
+        border-radius: 50%;
+        opacity: 1;
     }
     100%{
-        top:0;
-        left: 0;
         border-radius: 50%;
-        width: 100%;
-        height: 100%;
+        opacity: 0;
     }
 }

@@ -1,10 +1,8 @@
 import color from "../Utils/variable.js";
 
 function ahead(selector) {
-    let speedl = 0.03,
-        speedu = 0.05,
-        f = false;
-    console.log(color);
+    let speedl = 0.01,
+        speedu = 0.03;
     
     let curWinWidth = window.innerWidth,
         curWinHeight = window.innerHeight;
@@ -39,7 +37,6 @@ function ahead(selector) {
             [this.x, this.y, this.movex, this.movey] = randomPositon(1000, 10);
             this.r = random(1, 5);
             this.v = random(speedl, speedu);
-            // this.f = f;
         },
         draw: function (cxt) {
             cxt.beginPath();
@@ -54,8 +51,7 @@ function ahead(selector) {
                 this.y += this.movey * this.v;
                 this.x += this.movex * this.v;
             } else {
-                // if(f)
-                    this.init();
+                this.init();
             }
         }
     }

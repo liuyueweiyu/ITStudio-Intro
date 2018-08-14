@@ -16,11 +16,13 @@ $top-status:$h/2 - $width/2;
         left: 0;
         right: 0;
         margin: 0 auto;
-        animation: fall 0.75s cubic-bezier(.76,.01,.27,1) 3,
-                   todark 1s linear forwards 2.25s;
+        animation: fall 0.75s cubic-bezier(.76,.01,.27,1),
+                   todark 1s linear forwards 0.75s;
     }
 }
-
+// body{
+//     animation: tolight 1s linear forwards 0.75s;
+// }
 @keyframes fall{
     0%{
         top: $top-status;
