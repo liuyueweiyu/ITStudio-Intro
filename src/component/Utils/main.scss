@@ -14,3 +14,16 @@
 @import "../Selectbox/Selectbox.scss";
 @import "../Soapbubble/Soapbubble.scss";
 @import "../Light/Light.scss";
+
+.begin{
+    @extend .fullscreen;
+    @extend .flexcenter;
+    .begin-button{
+        display: block;
+        height: 96.5px;
+        width: 460px;
+        border: none;
+        background: url("../Logo/Logo.png");
+        background-size: cover;
+    }
+}

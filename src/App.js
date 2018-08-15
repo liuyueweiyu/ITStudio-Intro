@@ -28,7 +28,9 @@ class App extends React.Component{
             <React.Fragment>
                 {
                     !this.state.isBegin &&
-                    <button onClick={this.begin}>点我开始</button>
+                    <div className="begin">
+                        <a title="点击开始" className="begin-button" onClick={this.begin}></a>
+                    </div>
                 }
                 {
                     this.state.isBegin &&
