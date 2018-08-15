@@ -1,5 +1,6 @@
 import React from "react";
-import ballmove from "./ball.js";
+import Boom from "../Soapbubble/Soapbubble";
+import color  from "../Utils/variable.js";
 
 class Light extends React.Component{
 
@@ -12,18 +13,18 @@ class Light extends React.Component{
             this.setState({
                 ball: true
             });
-            ballmove("#canvas");
         }, 750);
     }
 
-    componentDidMount() {
-        
-    }
     render(){
         return (
             <div className="light">
                 <div className="ball"></div>
-                {this.state.ball && <canvas id="canvas"></canvas>}
+                {this.state.ball && 
+                <div className="lightboom">
+                    <Boom bg={color.two} />
+                </div>
+                }
             </div>
         );
     }

@@ -12,7 +12,7 @@ class Final extends React.Component{
             this.setState({
                 light: true
             });
-        }, 4250);
+        }, 5050);
         setTimeout(() => {
             this.setState({
                 all:false
