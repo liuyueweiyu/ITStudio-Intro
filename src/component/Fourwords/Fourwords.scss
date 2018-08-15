@@ -7,12 +7,20 @@
         opacity: 0;
         filter: blur(5px);
         position: absolute;
-        animation: apeared 2s linear forwards;
-                //    disapear 0.3s linear forwards 8.8s;
+        animation: apeared 2s linear forwards,
+                   blurry 1s linear forwards 10s,
+                   disapear 1s linear forwards 11s;
     }
     h1,h2{
         @extend .fontstyle;
         color: $two;
-        animation: apear 5s linear forwards;
+    }
+    h1{
+        animation: apear 4s linear forwards;
+    }
+    h2{
+        animation: apeared 4s linear forwards,
+                   blurry 2s linear forwards 4s,
+                   disapear 1s linear forwards 6s;
     }
 }

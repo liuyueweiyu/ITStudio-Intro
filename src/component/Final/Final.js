@@ -1,37 +1,23 @@
 import React from "react";
-import Soapbubble from "../Soapbubble/Soapbubble";
+import Light from "../Light/Light";
 
 class Final extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            boom : false,
-            one: false,
-            two:false,
+            light:false,
             all : true
         }
         setTimeout(() => {
             this.setState({
-                one: true
+                light: true
             });
-        }, 2000);
-        setTimeout(() => {
-            this.setState({
-                boom:true,
-                one: false
-            });
-        }, 3300);
-        setTimeout(() => {
-            this.setState({
-                boom:false,
-                two: true
-            });
-        }, 4000);
+        }, 4250);
         setTimeout(() => {
             this.setState({
                 all:false
             });
-        }, 8500);
+        }, 13000);
     }
 
     render(){
@@ -42,8 +28,8 @@ class Final extends React.Component{
                     <h2>用灵感点亮生活</h2>
                     <h3>我们是实践者</h3>
                     <h4>用智慧实现构想</h4>
-                    {this.state.one && <span className="small one"></span>}
-                    {this.state.boom && <div className="boom"><Soapbubble bg="#fff" /></div>}
+                    {this.state.light &&
+                    <Light />}
                 </div>
                 
             );

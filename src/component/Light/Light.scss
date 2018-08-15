@@ -4,7 +4,6 @@ $width:35px;
 $top-status:$h/2 - $width/2;
 .light{
     @include box($w, $h);
-    // background: $three;
     @extend .absolute;
     position: relative;
     .ball{
@@ -16,14 +15,13 @@ $top-status:$h/2 - $width/2;
         left: 0;
         right: 0;
         margin: 0 auto;
-        animation: fall 0.75s cubic-bezier(.76,.01,.27,1),
-                   todark 1s linear forwards 0.75s;
+        animation: light-fall 0.75s cubic-bezier(.76, .01, .27, 1) 3,
+                   todark 1s linear forwards 2.25s,
+                   disapear 0.5s linear forwards 3.25s;
     }
 }
-// body{
-//     animation: tolight 1s linear forwards 0.75s;
-// }
-@keyframes fall{
+
+@keyframes light-fall{
     0%{
         top: $top-status;
         height: $width;
@@ -37,10 +35,7 @@ $top-status:$h/2 - $width/2;
         height: $width;
     }
 }
-@keyframes tolight{
-    0%{background: $two;}
-    100%{background: $two;}
-}
+
 @keyframes todark{
     0%{background: $one;}
     100%{background: $one;}    

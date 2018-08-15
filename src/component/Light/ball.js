@@ -3,7 +3,7 @@ import color from "../Utils/variable.js";
 function ahead(selector) {
     let speed = 0.2,
         opa = 1,
-        seed = 0.005,
+        seed = 0.01,
         speed_s = 0.001;
         
 

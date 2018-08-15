@@ -10,8 +10,6 @@ class App extends React.Component{
         this.begin = this.begin.bind(this);
     } 
 
-
-
     begin(){
         this.setState({
             isBegin:true
@@ -22,7 +20,7 @@ class App extends React.Component{
         }, 2800);   //Logo移动时间+变透明两个动画的时间+预留时间
         setTimeout(() => {
             audio.pause();
-        }, 67800);
+        }, 78300);
     }
 
     render(){

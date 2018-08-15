@@ -2,30 +2,12 @@
     position: relative;
     background: $one;
     @extend .fullscreen;
-    animation: boom 1s linear 4s forwards;
+    animation: tolight 1s linear forwards 6.5s;
     h1,h2,h3,h4{
         @extend .absolute;
         @extend .fontstyle;
         text-align: center;
         line-height: 100vh;
-    }
-    .small{
-        position: absolute;
-        display: block;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        top: calc(50vh - 250px);
-        border-radius: 50%;
-    }
-    .one{
-        @include box(35px,35px);
-        background: $two;
-        animation: smallball 1s cubic-bezier(1, .23, .04, .75) forwards 0.3s;
-    }
-    .two{
-        @include box(15px, 15px);
-        background: $one;
     }
     h1,h2{
         color: $two;
@@ -34,22 +16,16 @@
         color: $one;
     }
     h1{
-        animation: font-kirakira 1.5s linear  forwards;
+        animation: font-kirakira 2.5s linear  forwards;
     }
     h2{
-        animation: font-kirakira 2.5s linear forwards 1.5s;
+        animation: font-kirakira 4s linear forwards 2.5s;
     }
     h3{
-        animation: font-kirakira 2s linear forwards 4s;
+        animation: font-kirakira 2.5s linear forwards 6.5s;
     }
     h4{
-        animation: font-kirakira 2.5s linear forwards 6s;
-    }
-    .boom{
-        top: calc(50vh - 275px);
-        padding: 0 calc(50vw - 50px);
-        position: absolute;
-        
+        animation: font-kirakira 4s linear forwards 9s;
     }
 }
 .all{
@@ -78,7 +54,6 @@
     }
     
 }
-
 @keyframes font-kirakira{
     0%{
         opacity: 0;
@@ -94,23 +69,11 @@
     }
 }
 
-@keyframes smallball{
-    0%{
-        top: calc(50vh - 250px);
-    }
-    67%{
-        top: calc(50vh - 150px);    
-    }
-    100%{
-        top: calc(50vh - 250px);
-    }
-}
-
-@keyframes boom{
-    from{
+@keyframes tolight {
+    0% {
         background: $two;
     }
-    to{
+    100% {
         background: $two;
     }
 }

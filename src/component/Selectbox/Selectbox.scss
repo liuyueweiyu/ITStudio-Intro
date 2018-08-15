@@ -158,12 +158,19 @@ $line-height:2px;
 }
 
 @keyframes tocenterball{
-    50%{
+    30%{
         border-radius: 50%;
         opacity: 1;
+        width: .5*$box-width;
+        height: .5*$box-width;
+        
     }
     100%{
         border-radius: 50%;
-        opacity: 0;
+        // opacity: 0;
+        width: 0;
+        height: 0;
+        top: 50px;
+        left: 50px;
     }
 }

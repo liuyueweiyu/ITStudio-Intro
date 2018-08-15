@@ -14,9 +14,8 @@ class Fourwords extends React.Component{
                 first:false,
                 second:true
             });
-        }, 5000);
+        }, 4000);
     }
-
     componentDidMount(){
         backgound("#canvas");
     }

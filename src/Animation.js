@@ -19,18 +19,18 @@ class Animation extends React.Component{
                 this.setState({
                     stage: 2
                 });
-            //     setTimeout(() => {
-            //         this.setState({
-            //             stage: 3
-            //         });
-            //         setTimeout(() => {
-            //             this.setState({
-            //                 stage: 4
-            //             });
-            //         }, 9100);
-            //     }, 14000);
-            }, 17500);
-        }, 22500);
+                setTimeout(() => {
+                    this.setState({
+                        stage: 3
+                    });
+                    setTimeout(() => {
+                        this.setState({
+                            stage: 4
+                        });
+                    }, 11000);
+                }, 12000);
+            }, 17800);
+        }, 22800);
 
 
 
@@ -48,12 +48,11 @@ class Animation extends React.Component{
                 );
             case 2:
                 return(
-                    // <Pen />
                     <Forwords />
                 );
             case 3:
                 return(
-                    <Forwords />
+                    <Pen />
                 );
             case 4:
                 return (
