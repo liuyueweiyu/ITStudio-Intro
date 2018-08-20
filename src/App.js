@@ -15,9 +15,21 @@ class App extends React.Component{
             isBegin:true
         });
         const audio = document.getElementById('music');
+        console.log(audio.volume);
         setTimeout(() => {
             audio.play();
         }, 2800);   //Logo移动时间+变透明两个动画的时间+预留时间
+        setTimeout(() => {
+            // audio.pause();
+
+            for(let i = 1;i<= 100;i++){
+                setTimeout((index = i) => {
+                    audio.volume = (100 - index)*0.01;
+                    console.log(audio.volume);
+                }, i*20);
+            }
+
+        }, 76300);
         setTimeout(() => {
             audio.pause();
         }, 78300);

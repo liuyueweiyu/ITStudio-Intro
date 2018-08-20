@@ -53,12 +53,12 @@ module.exports = {
             template: './src/index.html',
             chunks: ['index'],
             favicon:'./src/component/20180806050252871.ico',
-            outputPath:'images/'
+            outputPath:'images/',
             // chunks:['test'],
         }),
     ],
-    // mode: 'development',
-    mode: 'production',
+    mode: 'development',
+    // mode: 'production',
     stats: {
         colors: true,
         // assets: false,
