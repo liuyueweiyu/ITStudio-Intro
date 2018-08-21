@@ -1,11 +1,13 @@
 import React from "react";
 import Light from "../Light/Light";
+import Fourline from "../Fourlines/Fourlines";
 
 class Final extends React.Component{
     constructor(props){
         super(props);
         this.state = {
             light:false,
+            lines:false,
             all : true
         }
         setTimeout(() => {
@@ -13,6 +15,11 @@ class Final extends React.Component{
                 light: true
             });
         }, 5050);
+        setTimeout(() => {
+            this.setState({
+                lines: true
+            });
+        }, 9500);
         setTimeout(() => {
             this.setState({
                 all:false
@@ -30,6 +37,8 @@ class Final extends React.Component{
                     <h4>用智慧实现构想</h4>
                     {this.state.light &&
                     <Light />}
+                    {this.state.lines &&
+                    <Fourline />}
                 </div>
                 
             );

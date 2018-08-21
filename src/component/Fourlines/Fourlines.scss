@@ -1,0 +1,46 @@
+$f-w:500px;
+$f-h:300px;
+$f-time:1s;
+$dis:0.1s;
+$delay:3.4s;
+.fourlines{
+    position: relative;
+    margin: auto;
+    width: $f-w;
+    height: $f-h;
+    .firstline{
+        @extend %line-to-ball;
+        animation: towidth $f-time linear forwards,
+                   disapear $dis linear forwards $delay;
+    }
+
+    .secondline{
+        @extend %line-to-ball;
+        right: 0;
+        animation: toheight $f-time linear forwards,
+                   disapear $dis linear forwards $delay;
+    }
+    .thirdline {
+        @extend %line-to-ball;
+        bottom: 0;
+        animation: toheight $f-time linear forwards,
+                   disapear $dis linear forwards $delay;
+    }
+    .fourthline{
+        @extend %line-to-ball;
+        right: 0;
+        bottom: 0;
+        animation: towidth $f-time linear forwards,
+                   disapear $dis linear forwards $delay;
+    }
+}
+@keyframes towidth{
+    to{
+        width: $f-w;
+    }
+}
+@keyframes toheight {
+    to {
+        height: $f-h;
+    }
+}

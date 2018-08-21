@@ -15,17 +15,14 @@ class App extends React.Component{
             isBegin:true
         });
         const audio = document.getElementById('music');
-        console.log(audio.volume);
+        console.log("哼o(￣ヘ￣o＃) 写完这个就可以跑路了...///////")
         setTimeout(() => {
             audio.play();
         }, 2800);   //Logo移动时间+变透明两个动画的时间+预留时间
         setTimeout(() => {
-            // audio.pause();
-
             for(let i = 1;i<= 100;i++){
                 setTimeout((index = i) => {
                     audio.volume = (100 - index)*0.01;
-                    console.log(audio.volume);
                 }, i*20);
             }
 
@@ -48,7 +45,7 @@ class App extends React.Component{
                     this.state.isBegin &&
                     <Animation />
                 }
-                <audio id="music" preload="true">
+                <audio id="music" preload="true" type="audio/mpeg">
                     <source src={require("./bgm.mp3")}/>
                 </audio>
             </React.Fragment>
