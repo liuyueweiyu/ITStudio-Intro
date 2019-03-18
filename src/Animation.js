@@ -11,30 +11,27 @@ class Animation extends React.Component{
         this.state = {
             stage:0
         }
-        setTimeout(() => {
-            this.setState({
-                stage:1
-            });
+        this.run();
+    }
+    async run() {
+        let time = [11000, 12000, 17800, 22800],
+            output = [1, 2, 3, 4];
+        for (let i = 0; i < time.length; i++) {
+            await this.setTimeoutAsync(time[i], output[i]);
+        }
+    }
+    setTimeoutAsync(time, output) {
+        return new Promise((resolve, reject) => {
             setTimeout(() => {
-                this.setState({
-                    stage: 2
-                });
-                setTimeout(() => {
-                    this.setState({
-                        stage: 3
-                    });
-                    setTimeout(() => {
-                        this.setState({
-                            stage: 4
-                        });
-                    }, 11000);
-                }, 12000);
-            }, 17800);
-        }, 22800);
-
-
-
-
+                resolve(output);
+            }, time);
+        }).then((value) => {
+            this.setState({
+                stage:value
+            })
+        }).catch((err) => {
+            console.log('error!');
+        })
     }
     render(){
         switch (this.state.stage) {
@@ -67,5 +64,7 @@ class Animation extends React.Component{
         );
     }
 }
+
+
 
 export default Animation;

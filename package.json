@@ -6,11 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack",
-    "webpackwatch":"webpack --watch",
+    "webpackwatch": "webpack --watch",
     "start": "node_modules/.bin/webpack-dev-server -p"
   },
   "browserslist": [
-    "> 1%", 
+    "> 1%",
     "last 2 versions",
     "not ie <= 8"
   ],
